@@ -15,6 +15,7 @@ import java.util.UUID;
 
 import javax.imageio.ImageIO;
 
+import exception.CamImageNotFoundException;
 import jndi.JndiFactory;
 import models.CamImage;
 
@@ -89,7 +90,7 @@ public class CamImageDaoImpl implements CamImageDao {
 				CamImage camImage = new CamImage();
 				camImage.setId(rs.getLong("id"));
 				camImage.setCaptureTime(rs.getTimestamp("captureTime"));
-				camImage.setName(rs.getString("name"));
+				camImage.setUuid(UUID.fromString(rs.getString("UUID")));
 				camImage.setThumbnail(convertBlobToImage(rs.getBlob("thumbnail")));
 				camImage.setCamId(rs.getLong("camId"));
 				return camImage;
@@ -97,7 +98,7 @@ public class CamImageDaoImpl implements CamImageDao {
 				throw new Exception("Image not found");
 			}
 		} catch (Exception e) {
-			// TODO: handle exception
+			throw new CamImageNotFoundException();
 		} finally {
 			closeConnection(con);
 		}
