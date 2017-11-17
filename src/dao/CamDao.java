@@ -9,5 +9,4 @@ public interface CamDao {
 	public void delete(Long id);
 	public Cam get(Long id);
 	public List<Cam> getAll();
-	public void test();
 }
