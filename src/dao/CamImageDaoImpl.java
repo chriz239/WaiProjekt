@@ -9,6 +9,7 @@ import java.sql.Blob;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Timestamp;
 import java.util.List;
 import java.util.UUID;
 
@@ -101,12 +102,6 @@ public class CamImageDaoImpl implements CamImageDao {
 			closeConnection(con);
 		}
 	}
-
-	@Override
-	public List<CamImage> getAll() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 	
 	@Override
 	public void saveCaputredImage(BufferedImage img) {
@@ -117,6 +112,12 @@ public class CamImageDaoImpl implements CamImageDao {
 		// TODO: Datensatz speichern
 		
 		// TODO: BufferedImage img an richtiger Stelle abspeichern
+	}
+	
+	@Override
+	public List<CamImage> getBetween(Timestamp start, Timestamp end) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 	private void saveCamImageToFile(CamImage camImg) {
@@ -167,6 +168,8 @@ public class CamImageDaoImpl implements CamImageDao {
 			}
 		}
 	}
+
+	
 
 	
 	
