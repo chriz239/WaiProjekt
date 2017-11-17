@@ -33,9 +33,6 @@ public class CamImage {
 	public String getFullImagePath() {
 		return CamId.toString() + captureTime.getMonth();
 	}
-	public void setFullImage(BufferedImage fullImage) {
-		this.fullImage = fullImage;
-	}
 	public BufferedImage getThumbnail() {
 		return thumbnail;
 	}
