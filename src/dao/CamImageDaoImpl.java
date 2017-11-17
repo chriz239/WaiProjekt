@@ -108,10 +108,9 @@ public class CamImageDaoImpl implements CamImageDao {
 		// TODO: thumbnail generieren
 		
 		// TODO: UUID generieren
+		UUID uuid = UUID.randomUUID();
 		
-		// TODO: path generieren (<prefix>/<camId>/<jahr>-<monat>/<UUID>.png
-		
-		// TODO: Datensatz in Datenbank speichern
+		// TODO: Datensatz speichern
 		
 		// TODO: BufferedImage img an richtiger Stelle abspeichern
 	}
