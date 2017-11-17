@@ -9,7 +9,9 @@ import java.sql.Blob;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -123,8 +125,28 @@ public class CamImageDaoImpl implements CamImageDao {
 	
 	@Override
 	public List<CamImage> getBetween(Timestamp start, Timestamp end) {
-		// TODO Auto-generated method stub
-		return null;
+		if (start == null || end == null) {
+			throw new IllegalArgumentException("start or end is null");
+		}
+		
+		Connection con = null;
+		try {
+			con = jndi.getConnection(connectionString);
+			PreparedStatement pstmt = con.prepareStatement("select id where CaptureTime > ? AND CaputreTime < ?");
+			pstmt.setTimestamp(1, start);
+			pstmt.setTimestamp(2, end);
+			ResultSet rs = pstmt.executeQuery();
+			List<CamImage> camImages = new ArrayList<CamImage>();
+			while (rs.next()) {
+				camImages.add(get(rs.getLong("id")));
+			}
+			return camImages;
+		} catch (Exception e) {
+			throw new CamImageNotFoundException();
+		} finally {
+			closeConnection(con);
+		}
+		
 	}
 	
 	private void saveCamImageToFile(CamImage camImg) {
@@ -138,6 +160,7 @@ public class CamImageDaoImpl implements CamImageDao {
 		}
 	}
 	
+	// TODO: Funktion wird nicht gebraucht - Bitte löschen
 	private BufferedImage loadCamImageFromFile(CamImage camImg) {
 		return null;
 	}
@@ -161,8 +184,12 @@ public class CamImageDaoImpl implements CamImageDao {
 	}
 	
 	private BufferedImage convertBlobToImage(Blob blob) {
-		return null;
-		
+		try {
+			return ImageIO.read(blob.getBinaryStream());
+		} catch (IOException | SQLException e) {
+			e.printStackTrace();
+			return null;
+		}
 	}
 	
 	private void closeConnection(Connection con) {
