@@ -32,17 +32,17 @@ public class CamImageDaoImpl implements CamImageDao {
 		try {
 			con = jndi.getConnection(connectionString);
 			if (img.getId() == null) {
-				PreparedStatement pstmt = con.prepareStatement("insert into camImages (id, captureTime, name, thumbnail, camId) values (?, ?, ?, ?, ?)");
+				PreparedStatement pstmt = con.prepareStatement("insert into camImages (id, captureTime, uuid, thumbnail, camId, path) values (?, ?, ?, ?, ?, ?)");
 				pstmt.setLong(1, img.getId());
 				pstmt.setTimestamp(2, img.getCaptureTime());
-				pstmt.setString(3, img.getName());
+				pstmt.setString(3, img.getUuid().toString());
 				pstmt.setBlob(4, convertImageToBlob(img.getThumbnail()));
 				pstmt.setLong(5, img.getCamId());
 				pstmt.executeUpdate();
 			} else {
 				PreparedStatement pstmt = con.prepareStatement("update camImages set caputreTime = ?, name = ?, thumbnail = ?, camId = ? where id = ?");
 				pstmt.setTimestamp(1, img.getCaptureTime());
-				pstmt.setString(2, img.getName());
+				pstmt.setString(2, img.getUuid().toString());
 				pstmt.setBlob(3, convertImageToBlob(img.getThumbnail()));
 				pstmt.setLong(4, img.getCamId());
 				pstmt.setLong(5, img.getId());
