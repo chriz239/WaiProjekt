@@ -10,7 +10,14 @@ public class CamImage {
 	private UUID uuid;
 	private BufferedImage thumbnail;
 	private Long CamId;
+	private String path;
 	
+	public String getPath() {
+		return path;
+	}
+	public void setPath(String path) {
+		this.path = path;
+	}
 	public Long getId() {
 		return id;
 	}

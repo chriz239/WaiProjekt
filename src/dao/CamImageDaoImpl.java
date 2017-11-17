@@ -104,12 +104,14 @@ public class CamImageDaoImpl implements CamImageDao {
 	}
 	
 	@Override
-	public void saveCaputredImage(BufferedImage img) {
+	public void saveCaputredImage(BufferedImage img, int camId) {
 		// TODO: thumbnail generieren
 		
 		// TODO: UUID generieren
 		
-		// TODO: Datensatz speichern
+		// TODO: path generieren (<prefix>/<camId>/<jahr>-<monat>/<UUID>.png
+		
+		// TODO: Datensatz in Datenbank speichern
 		
 		// TODO: BufferedImage img an richtiger Stelle abspeichern
 	}
