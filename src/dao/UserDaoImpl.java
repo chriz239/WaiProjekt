@@ -38,7 +38,7 @@ public class UserDaoImpl implements UserDao {
 				pstmt.executeUpdate();
 			}
 		} catch (Exception e) {
-			// TODO: handle exception
+			e.printStackTrace();
 		} finally {
 			closeConnection(con);
 		}

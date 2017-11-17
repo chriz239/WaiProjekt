@@ -152,7 +152,9 @@ public class CamImageDaoImpl implements CamImageDao {
 	private void saveCamImageToFile(CamImage camImg) {
 		try{
 			BufferedImage bufImg = camImg.getThumbnail();
-			File outImg = new File(UUID.fromString(Integer.toString(camImg.getCaptureTime()) + ".png"));
+			//File outImg = new File(UUID.fromString(Integer.toString(camImg.getCaptureTime()) + ".png"));
+			// TODO: prefix nicht vergessen
+			File outImg = new File(camImg.getPath());
 			ImageIO.write(bufImg, "png", outImg); 
 		}
 		catch(IOException e){
