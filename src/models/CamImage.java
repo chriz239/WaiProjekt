@@ -2,11 +2,12 @@ package models;
 
 import java.awt.image.BufferedImage;
 import java.sql.Timestamp;
+import java.util.UUID;
 
 public class CamImage {
 	private Long id;
 	private Timestamp captureTime;
-	private String name;
+	private UUID uuid;
 	private BufferedImage thumbnail;
 	private Long CamId;
 	
@@ -34,11 +35,11 @@ public class CamImage {
 	public void setThumbnail(BufferedImage thumbnail) {
 		this.thumbnail = thumbnail;
 	}
-	public String getName() {
-		return name;
+	public UUID getUuid() {
+		return uuid;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setUuid(UUID uuid) {
+		this.uuid = uuid;
 	}
 	public Long getCamId() {
 		return CamId;

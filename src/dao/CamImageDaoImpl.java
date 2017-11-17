@@ -3,12 +3,14 @@ package dao;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.io.IOException;
 import java.sql.Blob;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.List;
+import java.util.UUID;
 
 import javax.imageio.ImageIO;
 
@@ -106,6 +108,17 @@ public class CamImageDaoImpl implements CamImageDao {
 		return null;
 	}
 	
+	@Override
+	public void saveCaputredImage(BufferedImage img) {
+		// TODO: thumbnail generieren
+		
+		// TODO: UUID generieren
+		
+		// TODO: Datensatz speichern
+		
+		// TODO: BufferedImage img an richtiger Stelle abspeichern
+	}
+	
 	private void saveCamImageToFile(CamImage camImg) {
 		try{
 			BufferedImage bufImg = camImg.getThumbnail();
@@ -113,7 +126,7 @@ public class CamImageDaoImpl implements CamImageDao {
 			ImageIO.write(bufImg, "png", outImg); 
 		}
 		catch(IOException e){
-			e.getMessage;
+			e.printStackTrace();
 		}
 	}
 	
@@ -154,5 +167,7 @@ public class CamImageDaoImpl implements CamImageDao {
 			}
 		}
 	}
+
+	
 	
 }
