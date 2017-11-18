@@ -127,4 +127,32 @@ public class UserDaoImpl implements UserDao {
 			}				
 		}
 	}
+
+
+	@Override
+	public User getUserByName(String name) {
+		if (name == null || name.isEmpty())
+			throw new IllegalArgumentException("id can't be null or empty");
+		
+		Connection con = null;
+		try {
+			con = jndi.getConnection(connectionString);
+			PreparedStatement pstmt = con.prepareStatement("select id, name, password from users where name = ?");
+			pstmt.setString(1, name);
+			ResultSet rs = pstmt.executeQuery();
+			if (rs.next()) {
+				User user = new User();
+				user.setId(rs.getLong("id"));
+				user.setName(rs.getString("name"));
+				user.setPasswort(rs.getString("password"));
+				return user;
+			} else {
+				throw new Exception("User not found");
+			}
+		} catch (Exception e) {
+			throw new UserNotFoundException();
+		} finally {
+			closeConnection(con);
+		}
+	}
 }
