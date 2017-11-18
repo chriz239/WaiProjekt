@@ -24,7 +24,7 @@
 					<td>${user.vorname}</td>
 					<td>${user.nachname}</td>
 					<td>
-					  <form action="user_mod_view" method="post">
+					  <form action="view_user" method="post">
 	    			    <button name="userId" value="${user.id}">Ändern</button>
 					  </form>
 					</td>
