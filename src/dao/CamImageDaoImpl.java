@@ -1,5 +1,7 @@
 package dao;
 
+import java.awt.Graphics;
+import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -14,6 +16,7 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+import java.awt.image.BufferedImage; 
 
 import javax.imageio.ImageIO;
 
@@ -106,8 +109,27 @@ public class CamImageDaoImpl implements CamImageDao {
 		}
 	}
 	
-	public void generateThumb(BufferedImage img){
-		// TODO: thumbnail generieren;
+	public static BufferedImage generateThumb(BufferedImage img){
+		// TODO: scale Werte prüfen
+		try{
+			int w = 120;
+			int h = 90;
+			int imageWidth =img.getWidth();
+			int imageHeigth = img.getHeight();
+			//double outputAspect = 1.0*w/h;
+			//double inputAspect = 1.0*imageWidth/imageHeigth;
+			
+			Image scaledImage = img.getScaledInstance(w, h, Image.SCALE_SMOOTH);
+			BufferedImage thumb = new BufferedImage(w ,h, BufferedImage.TYPE_INT_RGB); 
+			Graphics g = thumb.getGraphics();
+            g.drawImage(scaledImage, 0, 0, null);
+            g.dispose();
+            
+            return thumb; 
+		}
+		catch (IOException e) {
+            e.printStackTrace();
+        }
 	}
 	
 	@Override
