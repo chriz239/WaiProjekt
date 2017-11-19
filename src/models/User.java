@@ -5,6 +5,13 @@ public class User {
 	private String name;
 	private String passwort;
 	
+	public User() { }
+	
+	public User(String name, String password) {
+		setName(name);
+		setPasswort(password);
+	}
+	
 	public Long getId() {
 		return id;
 	}

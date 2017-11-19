@@ -1,0 +1,11 @@
+<Context>
+	<Resource name="jdbc/CamDB"
+			  auth="Container"
+			  type="javax.sql.DataSource"
+			  driverClassName="org.postgresql.Driver"
+		      url="jdbc:postgresql://localhost:5432/CamDB"
+    		  username="postgres"
+    		  password="123qwe"
+    		  maxActive="250" maxIdle="5"
+	/>
+</Context>

@@ -8,6 +8,14 @@ public class Cam {
 	private URL url;
 	private String standort;
 	
+	public Cam() { }
+	
+	public Cam(String name, URL url, String standort) {
+		setName(name);
+		setUrl(url);
+		setStandort(standort);
+	}
+	
 	public Long getId() {
 		return id;
 	}
