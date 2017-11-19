@@ -116,8 +116,8 @@ public class CamImageDaoImpl implements CamImageDao {
 			int h = 90;
 			int imageWidth =img.getWidth();
 			int imageHeigth = img.getHeight();
-			double outputAspect = 1.0*w/h;
-			double inputAspect = 1.0*imageWidth/imageHeigth;
+			//double outputAspect = 1.0*w/h;
+			//double inputAspect = 1.0*imageWidth/imageHeigth;
 			
 			Image scaledImage = img.getScaledInstance(w, h, Image.SCALE_SMOOTH);
 			BufferedImage thumb = new BufferedImage(w ,h, BufferedImage.TYPE_INT_RGB); 
