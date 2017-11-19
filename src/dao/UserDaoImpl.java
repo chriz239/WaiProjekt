@@ -31,7 +31,7 @@ public class UserDaoImpl implements UserDao {
 				pstmt.setString(2, user.getPasswort());
 				pstmt.executeUpdate();
 			} else {
-				PreparedStatement pstmt = con.prepareStatement("update users set name = ?, password = ? where id = ?");
+				PreparedStatement pstmt = con.prepareStatement("update users set Name = ?, Password = ? where id = ?");
 				pstmt.setString(1, user.getName());
 				pstmt.setString(2, user.getPasswort());
 				pstmt.setLong(3, user.getId());

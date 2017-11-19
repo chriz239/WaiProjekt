@@ -27,15 +27,17 @@ public class CamDaoImpl implements CamDao{
 		try {
 			con = jndi.getConnection(connectionString);
 			if (cam.getId() == null) {
-				PreparedStatement pstmt = con.prepareStatement("insert into cams (name, url) values (?,?)");
+				PreparedStatement pstmt = con.prepareStatement("insert into cams (name, url, standort) values (?,?,?)");
 				pstmt.setString(1, cam.getName());
 				pstmt.setString(2, cam.getUrl().toString());
+				pstmt.setString(3, cam.getStandort());
 				pstmt.executeUpdate();
 			} else {
-				PreparedStatement pstmt = con.prepareStatement("update cams set name = ?, url = ? where id =?");
+				PreparedStatement pstmt = con.prepareStatement("update cams set name = ?, url = ?, standort = ? where id =?");
 				pstmt.setString(1, cam.getName());
 				pstmt.setString(2, cam.getUrl().toString());
-				pstmt.setLong(3, cam.getId());
+				pstmt.setString(3, cam.getStandort());
+				pstmt.setLong(4, cam.getId());
 				pstmt.executeUpdate();
 			}
 		} catch (Exception e) {

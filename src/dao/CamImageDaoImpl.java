@@ -127,13 +127,14 @@ public class CamImageDaoImpl implements CamImageDao {
             
             return thumb; 
 		}
-		catch (IOException e) {
+		catch (Exception e) {
             e.printStackTrace();
+            return null;
         }
 	}
 	
 	@Override
-	public void saveCaputredImage(BufferedImage img, int camId) {
+	public void saveCaputredImage(BufferedImage img, Long camId) {
 		// TODO:"caputred" zu "captured" ändern
 		
 		
