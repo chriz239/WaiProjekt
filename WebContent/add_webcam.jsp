@@ -10,7 +10,7 @@
 	<center>
 	<h1>Add WebCam</h1>
 	<form name="form_user_edit" action="cam_mod" method="post">		
-		<table border="1">
+		<table border="0">
 			<tbody>
 				<tr>
 					<td>URL</td>
@@ -27,7 +27,7 @@
 		</table>
 	</form>
 	<br>
-	<a href="main.jsp">Main menu</a>
+	<a href="add_user.jsp">Main menu</a>
 	</center>
 </body>
 </html>
