@@ -105,6 +105,8 @@ public class CamImageDaoImpl implements CamImageDao {
 	
 	public void generateThumb(BufferedImage img){
 		// TODO: thumbnail generieren;
+		int imageWidth =img.getWidth();
+		int imageHeigth = img.getHeight();
 	}
 	
 	@Override
