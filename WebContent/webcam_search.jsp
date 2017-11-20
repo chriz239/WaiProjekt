@@ -17,24 +17,37 @@
 			<tr>
 				<td>Cam wählen:
 				<select>
-					<option>cam1</option>
+					<option value="${camId}">cam1</option>
+					<option value="${camId}">cam2</option>
+					<option value="${camId}">cam3</option>
+					<option value="${camId}">cam4</option>
 				</select>
 				</td>
 			</tr>
 			<tr>
-				zeitraum
+				<td><center>Zeitraum:</center></td>
 			</tr>
 			<tr>
 				<td><center>Von</center></td>
 			</tr>
 			<tr>
-				<td><input type="text" name="Date_from" value=""></td>
+				<td><input type="datetime-local" name="Date_from" value=""></td>
 			</tr>
+			<tr>
+				<td><center>Bis</center></td>
+			</tr>
+			<tr>
+				<td><input type="datetime-local" name="Date_till" value=""></td>
+			</tr>
+			<tr>
+				<td><center><input type="submit" action="btnSearch" value="Search"></center></td>
+			</tr>
+		</tbody>
+		</table>
+		</form>
 		
-	
-	
-	
-	
+		<p><a href="main.jsp">Main menu</a></p>
+		</center>
 
 </body>
 </html>

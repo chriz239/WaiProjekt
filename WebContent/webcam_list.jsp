@@ -18,19 +18,19 @@
 				<td>    </td>	
 			</tr>
 			
-			<c:forEach items="${all_users}" var="user">
+			<c:forEach items="${cams}" var="cam">
 				<tr>
-					<td>${user.id}</td>
-					<td>${user.vorname}</td>
-					<td>${user.nachname}</td>
+					<td>$${cam.name}</td>
+					<td>${cam.url}</td>
+					<td>${cam.id}</td>
 					<td>
-					  <form action="view_user" method="post">
-	    			    <button name="userId" value="${user.id}">Ändern</button>
+					  <form action="cam_view" method="post">
+	    			    <button name="CamId" value="${cam.id}">Ändern</button>
 					  </form>
 					</td>
 					<td>
-					  <form action="user_del" method="post">
-	    			    <button name="userId" value="${user.id}">Löschen</button>
+					  <form action="Cam_del" method="post">
+	    			    <button name="CamId" value="${cam.id}">Löschen</button>
 					  </form>
 					  </td>
 					  </tr>
@@ -41,9 +41,11 @@
   		</tbody>
   	</table>
   	<br>
+  	<p>
   	<a href="add_new_webcam">Add new Webcam</a>
   	<br>
   	<a href="add_user.jsp">Main menu</a>
+  	</p>
 </center>
 </body>
 </html>

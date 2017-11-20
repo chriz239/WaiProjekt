@@ -8,7 +8,7 @@
   <body>
   	<center>
   	<h1>Add User</h1>
-	<form name="form_user_edit" action="user_mod" method="post">		
+	<form name="form_add_user" action="user_mod" method="post">		
 		<table border="0">
 			<tbody>
 				
@@ -50,12 +50,12 @@
 				</tr>
 
 				<tr>	
-					<td colspan="2"><center><input type="submit" name="btnAdd" value="Save"></center></td>
+					<td colspan="2"><center><input type="submit" name="btnAdd" value="Add"></center></td>
 				</tr>				
 			</tbody>
 		</table>
 	</form>
-	<a href="main.jsp">Main menu</a>
+	<p><a href="main.jsp">Main menu</a></p>
 	</center>
   </body>
 </html>
