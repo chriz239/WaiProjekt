@@ -110,7 +110,7 @@ public class CamImageDaoImpl implements CamImageDao {
 	}
 	
 	public static BufferedImage generateThumb(BufferedImage img){
-		// TODO: scale Werte prüfen
+		// TODO: scale (w,h) Werte prüfen
 		try{
 			int w = 120;
 			int h = 90;
@@ -136,15 +136,14 @@ public class CamImageDaoImpl implements CamImageDao {
 	@Override
 	public void saveCaputredImage(BufferedImage img, Long camId) {
 		// TODO:"caputred" zu "captured" ändern
-		
-		
 		// TODO: UUID generieren
 		UUID uuid = UUID.randomUUID();
 		
 		// TODO: Datensatz speichern
-		
-		// TODO: BufferedImage img an richtiger Stelle abspeichern
+	
 	}
+		// TODO: BufferedImage img an richtiger Stelle abspeichern
+	
 	
 	@Override
 	public List<CamImage> getBetween(Timestamp start, Timestamp end) {
@@ -185,10 +184,7 @@ public class CamImageDaoImpl implements CamImageDao {
 		}
 	}
 	
-	// TODO: Funktion wird nicht gebraucht - Bitte löschen
-	private BufferedImage loadCamImageFromFile(CamImage camImg) {
-		return null;
-	}
+
 	
 	private ByteArrayInputStream convertImageToBlob(BufferedImage img) {
 		ByteArrayOutputStream baos = null;
