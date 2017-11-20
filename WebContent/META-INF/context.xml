@@ -1,4 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <Context>
+	<Environment name="start_scheduler" value="true" type="java.lang.Boolean" override="false"/>
+    <Environment name="projectPath" value="C:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent" type="java.lang.String" override="false"/>
+    <Environment name="configPath" value="/config" type="java.lang.String" override="false"/>
+	
 	<Resource name="jdbc/CamDB"
 			  auth="Container"
 			  type="javax.sql.DataSource"
