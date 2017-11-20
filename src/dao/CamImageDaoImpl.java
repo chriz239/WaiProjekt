@@ -112,8 +112,8 @@ public class CamImageDaoImpl implements CamImageDao {
 	public static BufferedImage generateThumb(BufferedImage img){
 		// TODO: scale (w,h) Werte prüfen
 		try{
-			int w = 120;
-			int h = 90;
+			int w = 216;
+			int h = 162;
 			int imageWidth =img.getWidth();
 			int imageHeigth = img.getHeight();
 			double outputAspect = 1.0*w/h;
