@@ -10,6 +10,6 @@ public interface CamImageDao {
 	public void save(CamImage img);
 	public void delete(Long id);
 	public CamImage get(Long id);
-	public void saveCaputredImage(BufferedImage img, Long camId);
+	public void saveCapturedImage(BufferedImage img, Long camId);
 	public List<CamImage> getBetween(Timestamp start, Timestamp end);
 }

@@ -1,10 +1,13 @@
 package background;
 
+import java.awt.Graphics2D;
+import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.List;
 
 import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 
 import org.apache.log4j.Logger;
 import org.quartz.Job;
@@ -30,10 +33,16 @@ public class BackgroundWorker implements Job {
 			// get Image from URL and save to DB
 			try {
 				jlog.info("Get image from URL: " + cam.getUrl().toString());
-				BufferedImage bi = ImageIO.read(cam.getUrl());
+				//BufferedImage bi = ImageIO.read(cam.getUrl());
+				// geht 100 MAl schneller als die Zeile darüber
+				Image img = (new ImageIcon(cam.getUrl())).getImage();
+				BufferedImage bi = new BufferedImage(img.getWidth(null), img.getHeight(null), BufferedImage.TYPE_INT_ARGB);
+			    Graphics2D bGr = bi.createGraphics();
+			    bGr.drawImage(img, 0, 0, null);
+			    bGr.dispose();
 				jlog.info("Save image to db");
-				camImageDao.saveCaputredImage(bi, cam.getId());
-			} catch (IOException e) {
+				camImageDao.saveCapturedImage(bi, cam.getId());
+			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}

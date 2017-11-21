@@ -1,6 +1,5 @@
 package models;
 
-import java.awt.image.BufferedImage;
 import java.sql.Timestamp;
 import java.util.UUID;
 
@@ -8,15 +7,21 @@ public class CamImage {
 	private Long id;
 	private Timestamp captureTime;
 	private UUID uuid;
-	private BufferedImage thumbnail;
 	private Long CamId;
-	private String path;
+	private String imagePath;
+	private String thumbPath;
 	
-	public String getPath() {
-		return path;
+	public String getThumbPath() {
+		return thumbPath;
 	}
-	public void setPath(String path) {
-		this.path = path;
+	public void setThumbPath(String thumbPath) {
+		this.thumbPath = thumbPath;
+	}
+	public String getImagePath() {
+		return imagePath;
+	}
+	public void setImagePath(String path) {
+		this.imagePath = path;
 	}
 	public Long getId() {
 		return id;
@@ -29,15 +34,6 @@ public class CamImage {
 	}
 	public void setCaptureTime(Timestamp captureTime) {
 		this.captureTime = captureTime;
-	}
-	public String getFullImagePath() {
-		return CamId.toString() + captureTime.getMonth();
-	}
-	public BufferedImage getThumbnail() {
-		return thumbnail;
-	}
-	public void setThumbnail(BufferedImage thumbnail) {
-		this.thumbnail = thumbnail;
 	}
 	public UUID getUuid() {
 		return uuid;

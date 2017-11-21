@@ -14,10 +14,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 import java.util.UUID;
-import java.awt.image.BufferedImage; 
-
 import javax.imageio.ImageIO;
 
 import exception.CamImageNotFoundException;
@@ -38,24 +37,23 @@ public class CamImageDaoImpl implements CamImageDao {
 		try {
 			con = jndi.getConnection(connectionString);
 			if (img.getId() == null) {
-				PreparedStatement pstmt = con.prepareStatement("insert into camImages (id, captureTime, uuid, thumbnail, camId, path) values (?, ?, ?, ?, ?, ?)");
-				pstmt.setLong(1, img.getId());
-				pstmt.setTimestamp(2, img.getCaptureTime());
-				pstmt.setString(3, img.getUuid().toString());
-				pstmt.setBlob(4, convertImageToBlob(img.getThumbnail()));
-				pstmt.setLong(5, img.getCamId());
-				pstmt.executeUpdate();
-			} else {
-				PreparedStatement pstmt = con.prepareStatement("update camImages set caputreTime = ?, name = ?, thumbnail = ?, camId = ? where id = ?");
+				PreparedStatement pstmt = con.prepareStatement("insert into camImages (captureTime, uuid, camId, path) values (?, ?, ?, ?)");
 				pstmt.setTimestamp(1, img.getCaptureTime());
 				pstmt.setString(2, img.getUuid().toString());
-				pstmt.setBlob(3, convertImageToBlob(img.getThumbnail()));
-				pstmt.setLong(4, img.getCamId());
+				pstmt.setLong(3, img.getCamId());
+				pstmt.setString(4, img.getImagePath());
+				pstmt.executeUpdate();
+			} else {
+				PreparedStatement pstmt = con.prepareStatement("update camImages set captureTime = ?, name = ?, camId = ?, path = ? where id = ?");
+				pstmt.setTimestamp(1, img.getCaptureTime());
+				pstmt.setString(2, img.getUuid().toString());
+				pstmt.setLong(3, img.getCamId());
+				pstmt.setString(4, img.getImagePath());
 				pstmt.setLong(5, img.getId());
 				pstmt.executeUpdate();
 			}
 		} catch (Exception e) {
-			// TODO: handle exception
+			e.printStackTrace();
 		} finally {
 			closeConnection(con);
 		}
@@ -88,7 +86,7 @@ public class CamImageDaoImpl implements CamImageDao {
 		Connection con = null;
 		try {
 			con = jndi.getConnection(connectionString);
-			PreparedStatement pstmt = con.prepareStatement("select id, captureTime, name, thumbnail, camId from camImages where id = ?");
+			PreparedStatement pstmt = con.prepareStatement("select id, captureTime, name, camId from camImages where id = ?");
 			pstmt.setLong(1, id);
 			ResultSet rs = pstmt.executeQuery();
 			if (rs.next()) {
@@ -96,7 +94,6 @@ public class CamImageDaoImpl implements CamImageDao {
 				camImage.setId(rs.getLong("id"));
 				camImage.setCaptureTime(rs.getTimestamp("captureTime"));
 				camImage.setUuid(UUID.fromString(rs.getString("UUID")));
-				camImage.setThumbnail(convertBlobToImage(rs.getBlob("thumbnail")));
 				camImage.setCamId(rs.getLong("camId"));
 				return camImage;
 			} else {
@@ -112,6 +109,7 @@ public class CamImageDaoImpl implements CamImageDao {
 	public static BufferedImage generateThumb(BufferedImage img){
 		// TODO: scale (w,h) Werte prüfen
 		try{
+			/*
 			int w = 216;
 			int h = 162;
 			int imageWidth =img.getWidth();
@@ -123,6 +121,20 @@ public class CamImageDaoImpl implements CamImageDao {
 			}
 			else{
 				w = (int)(h*inputAspect);
+			}
+			*/
+			
+			double factor;
+			int w, h, maxSize = 150;
+			// find bigger one
+			if (img.getHeight() > img.getWidth()) {
+				factor = 1.0 * img.getHeight() / maxSize; //100px
+				h = maxSize;
+				w = (int) Math.round(img.getWidth() / factor);
+			} else {
+				factor = 1.0 * img.getWidth() / maxSize;
+				w = maxSize;
+				h = (int) Math.round(img.getHeight() / factor);
 			}
 			
 			Image scaledImage = img.getScaledInstance(w, h, Image.SCALE_SMOOTH);
@@ -139,16 +151,35 @@ public class CamImageDaoImpl implements CamImageDao {
         }
 	}
 	
+	@SuppressWarnings("deprecation")
 	@Override
-	public void saveCaputredImage(BufferedImage img, Long camId) {
-		// TODO:"caputred" zu "captured" ändern
-		// TODO: UUID generieren
+	public void saveCapturedImage(BufferedImage img, Long camId) {
 		UUID uuid = UUID.randomUUID();
 		
-		// TODO: Datensatz speichern
+		// thumbnail generieren
+		BufferedImage thumbnail = generateThumb(img);
+		
+		// Datensatz speichern
+		CamImage camImage = new CamImage();
+		camImage.setCamId(camId);
+		camImage.setCaptureTime(new Timestamp(Calendar.getInstance().getTime().getTime()));
+		camImage.setImagePath("C:\\Users\\Christopher\\Documents\\Studium\\WorkspaceWAI\\WaiCams\\WebContent\\bilder\\"
+							+ camId + "\\" 
+							+ camImage.getCaptureTime().getMonth() + "\\"
+							+ uuid + ".png");
+		camImage.setThumbPath("C:\\Users\\Christopher\\Documents\\Studium\\WorkspaceWAI\\WaiCams\\WebContent\\bilder\\Thumbs\\"
+				+ camId + "\\" 
+				+ camImage.getCaptureTime().getMonth() + "\\"
+				+ uuid + ".png");
+		camImage.setUuid(uuid);
+		
+		save(camImage);
 	
+		// BufferedImage img an richtiger Stelle abspeichern
+		saveCamImageToFile(img, camImage.getImagePath());
+		// Thumbnail an richtiger Stelle speichern
+		saveCamImageToFile(thumbnail, camImage.getThumbPath());
 	}
-		// TODO: BufferedImage img an richtiger Stelle abspeichern
 	
 	
 	@Override
@@ -160,7 +191,7 @@ public class CamImageDaoImpl implements CamImageDao {
 		Connection con = null;
 		try {
 			con = jndi.getConnection(connectionString);
-			PreparedStatement pstmt = con.prepareStatement("select id where CaptureTime > ? AND CaputreTime < ?");
+			PreparedStatement pstmt = con.prepareStatement("select id where capturetime > ? AND CaptureTime < ?");
 			pstmt.setTimestamp(1, start);
 			pstmt.setTimestamp(2, end);
 			ResultSet rs = pstmt.executeQuery();
@@ -177,16 +208,14 @@ public class CamImageDaoImpl implements CamImageDao {
 		
 	}
 	
-	private void saveCamImageToFile(CamImage camImg) {
+	private void saveCamImageToFile(BufferedImage img, String path) {
 		try{
-			BufferedImage bufImg = camImg.getThumbnail();
-			//File outImg = new File(UUID.fromString(Integer.toString(camImg.getCaptureTime()) + ".png"));
-			// TODO: prefix nicht vergessen
-			// TODO: CaptureTime nur monat für Dateiablage
-			File outImg = new File("C:\\ProjektWAI\"" + camImg.getId() + camImg.getCaptureTime() + camImg.getPath());
-			ImageIO.write(bufImg, "png", outImg); 
+			File outImg = new File(path);
+			// generate Parent Folder if not exist
+			outImg.getParentFile().mkdirs();
+			ImageIO.write(img, "png", outImg); 
 		}
-		catch(IOException e){
+		catch(Exception e){
 			e.printStackTrace();
 		}
 	}
