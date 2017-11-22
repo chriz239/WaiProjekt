@@ -14,15 +14,16 @@
 				<td>Name:   </td>
 				<td>Url:    </td>
 				<td>Id:     </td>	
-				<td>   </td>	
+				<td>Standort:   </td>	
 				<td>    </td>	
 			</tr>
 			
 			<c:forEach items="${cams}" var="cam">
 				<tr>
-					<td>$${cam.name}</td>
+					<td>${cam.name}</td>
 					<td>${cam.url}</td>
 					<td>${cam.id}</td>
+					<td>${cam.standort }</td>
 					<td>
 					  <form action="cam_view" method="post">
 	    			    <button name="CamId" value="${cam.id}">Ändern</button>

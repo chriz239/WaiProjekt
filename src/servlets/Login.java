@@ -18,6 +18,8 @@ public class Login extends HttpServlet {
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response) {
 		// Hier Login-Seite normal anzeigen
+		String name = request.getParameter("UserName");
+		String password = request.getParameter("Password");
 	}
 	
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
