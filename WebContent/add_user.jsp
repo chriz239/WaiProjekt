@@ -9,7 +9,7 @@
   <body>
   	<center>
   	<h1>Add User</h1>
-	<form name="form_add_user" action="user_mod" method="post">		
+	<form name="add_user" action="user_mod" method="post">		
 		<table border="0">
 			<tbody>
 				

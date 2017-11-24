@@ -9,30 +9,34 @@
 <body>
 <center>
 	<h1>List of Webcam</h1>
-	<table border="0">
+	<table border="1">
   		<tbody>
 	  		<tr>	  						
-				<td>Name:   </td>
-				<td>Url:    </td>
-				<td>Id:     </td>	
-				<td>Standort:   </td>	
-				<td>    </td>	
+				<td>Name:   	</td>
+				<td>Url:    	</td>
+				<td>Id:     	</td>	
+				<td>Standort:   </td>		
 			</tr>
 			
-			<c:forEach items="${cams}" var="cam">
+			<c:forEach items="${cam}" var="cam">
 				<tr>
-					<td>${cam.name}</td>
-					<td>${cam.url}</td>
-					<td>${cam.id}</td>
-					<td>${cam.standort }</td>
+					<td><c:out value="${cam.name}"/></td>
+					<td><c:out value="${cam.url}"/></td>
+					<td><c:out value="${cam.id}"/></td>
+					<td><c:out value="${cam.standort}"/></td>
 					<td>
-					  <form action="cam_view" method="post">
-	    			    <button name="CamId" value="${cam.id}">Ändern</button>
+					  <form action="cam_edit" method="post">
+	    			    <button name="CamId" value="${cam.id}">Edit</button>
 					  </form>
 					</td>
 					<td>
 					  <form action="Cam_del" method="post">
-	    			    <button name="CamId" value="${cam.id}">Löschen</button>
+	    			    <button name="CamId" value="${cam.id}">Delete</button>
+					  </form>
+					  </td>
+					  <td>
+					  <form action="Cam_User_view" method="post">
+					  	<button name="Cam_User" value="${user.cam}">Assign</button>
 					  </form>
 					  </td>
 					  </tr>
@@ -46,7 +50,7 @@
   	<p>
   	<a href="add_new_webcam">Add new Webcam</a>
   	<br>
-  	<a href="add_user.jsp">Main menu</a>
+  	<a href="add_user.jsp">Add User</a>
   	</p>
 </center>
 </body>

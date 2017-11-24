@@ -14,11 +14,11 @@
 		<table border="0">
 			<tbody>
 				<tr>
-					<td>URL</td>
+					<td>Name</td>
 					<td><input type="text" name="camUri" value="" style="width: 300px"></td>		
 				</tr>
 				<tr>
-					<td>Name</td>
+					<td>URL</td>
 					<td><input type="text" name="camName" value="" style="width: 300px"></td>		
 				</tr>
 				<tr>	
@@ -28,7 +28,7 @@
 		</table>
 	</form>
 	<br>
-	<p><a href="add_user.jsp">Main menu</a></p>
+	<p><a href="main.jsp">Main menu</a></p>
 	</center>
 </body>
 </html>
