@@ -183,21 +183,27 @@ public class CamImageDaoImpl implements CamImageDao {
 	
 	
 	@Override
-	public List<CamImage> getBetween(Timestamp start, Timestamp end) {
-		if (start == null || end == null) {
+	public List<CamImage> getBetween(Timestamp start, Timestamp end, Long camId) {
+		if (start == null || end == null || camId == null) {
 			throw new IllegalArgumentException("start or end is null");
 		}
 		
 		Connection con = null;
 		try {
 			con = jndi.getConnection(connectionString);
-			PreparedStatement pstmt = con.prepareStatement("select id where capturetime > ? AND CaptureTime < ?");
-			pstmt.setTimestamp(1, start);
-			pstmt.setTimestamp(2, end);
+			PreparedStatement pstmt = con.prepareStatement("select id, captureTime, name, camId from camImages where id = ? AND capturetime > ? AND CaptureTime < ?");
+			pstmt.setLong(1, camId);
+			pstmt.setTimestamp(2, start);
+			pstmt.setTimestamp(3, end);
 			ResultSet rs = pstmt.executeQuery();
 			List<CamImage> camImages = new ArrayList<CamImage>();
 			while (rs.next()) {
-				camImages.add(get(rs.getLong("id")));
+				CamImage camImage = new CamImage();
+				camImage.setId(rs.getLong("id"));
+				camImage.setCaptureTime(rs.getTimestamp("captureTime"));
+				camImage.setUuid(UUID.fromString(rs.getString("UUID")));
+				camImage.setCamId(rs.getLong("camId"));
+				camImages.add(camImage);
 			}
 			return camImages;
 		} catch (Exception e) {
