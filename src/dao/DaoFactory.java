@@ -12,4 +12,8 @@ public class DaoFactory {
 	public static UserDao getUserDao() {
 		return new UserDaoImpl();
 	}
+	
+	public static UserCamAccess getUserCamAccessDao () {
+		return new UserCamAccessImpl();
+	}
 }

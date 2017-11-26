@@ -27,23 +27,22 @@
   }
   </script>
 
-<title>Search Webcam</title>
+<title>Image Filter</title>
 </head>
 <body onload="getDate()">
 <center>
 
 	<h1>Search Webcam</h1>
-	<form name="form_webcam_search" action="view_webcam_search" method="post">
+	<form name="form_webcam_search" action="ImageFilter" method="post">
 		<table border = "1">
 		<tbody>
 		
 			<tr>
 				<td>Cam wählen:
 				<select>
-					<option value="${camId}">cam1</option>
-					<option value="${camId}">cam2</option>
-					<option value="${camId}">cam3</option>
-					<option value="${camId}">cam4</option>
+					<c:forEach var="cam" items="${cams}" varStatus="i">
+						<option name="camid" value="${cam.id}">cam.name</option>
+					</c:forEach>
 				</select>
 				</td>
 			</tr>
@@ -77,12 +76,14 @@
 				<td>Date:   </td>
 				<td>Pic:     </td>	
 			</tr>			
-			<c:forEach var="pic" items="${pics}" varStatus="i">
+			<c:forEach var="pic" items="${images}" varStatus="i">
 				<tr>
 					<td>
-					   <p><fmt:formatDate type = "both" value = "${pic.date}" pattern="dd.MM.yyyy HH:mm" /></p>
+					   <p><fmt:formatDate type = "both" value = "${pic.captureTime}" pattern="dd.MM.yyyy HH:mm" /></p>
 					</td>					
-					<td><a href="getPicID=${pics[i.index].id}"><img src="getPicID=${pics[i.index].id}&thumb" style="width:100px;height:100px;"></a>
+					<!-- <td><a href="getPicID=${pics[i.index].id}"><img src="getPicID=${pics[i.index].id}&thumb" style="width:100px;height:100px;"></a> -->
+					<td>
+						<a href="/bilder/${pic.uuid}.png"><img src="/bilder/Thumbs/${pic.uuid}.png" /></a>
 					</td>
 				</tr>
 			</c:forEach>	

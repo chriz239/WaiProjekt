@@ -60,13 +60,14 @@ public class Login extends HttpServlet {
 		
 		// set user as logged in
 		HttpSession session = request.getSession(true);
-		session.setAttribute("loggedin", new Boolean(true));
+		session.setAttribute("user", user);
 		
 		// forward to next page depending on mode
 		if (selectedMode.equals("uMode")) {
 			// redirect user to webcam_search
-			RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/WebcamSearch");
-			dispatcher.forward(request, response);
+			RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/ImageFilter");
+			//dispatcher.forward(request, response);
+			response.sendRedirect("ImageFilter");
 		}
 		
 		if (selectedMode.equals("pMode")) {
