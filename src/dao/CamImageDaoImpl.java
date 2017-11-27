@@ -178,9 +178,9 @@ public class CamImageDaoImpl implements CamImageDao {
 		save(camImage);
 	
 		// BufferedImage img an richtiger Stelle abspeichern
-		saveCamImageToFile(img, camImage.getImagePath());
+		saveCamImageToFile(img, imagePath);
 		// Thumbnail an richtiger Stelle speichern
-		saveCamImageToFile(thumbnail, camImage.getThumbPath());
+		saveCamImageToFile(thumbnail, thumbPath);
 	}
 	
 	

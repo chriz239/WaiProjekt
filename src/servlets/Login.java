@@ -71,8 +71,9 @@ public class Login extends HttpServlet {
 		}
 		
 		if (selectedMode.equals("pMode")) {
-			RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/user_list.jsp");
-			dispatcher.forward(request, response);
+			//RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/UserList");
+			//dispatcher.forward(request, response);
+			response.sendRedirect("UserList");
 		}
 	}
 }
