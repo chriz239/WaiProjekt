@@ -163,14 +163,16 @@ public class CamImageDaoImpl implements CamImageDao {
 		CamImage camImage = new CamImage();
 		camImage.setCamId(camId);
 		camImage.setCaptureTime(new Timestamp(Calendar.getInstance().getTime().getTime()));
-		camImage.setImagePath("C:\\Users\\Christopher\\Documents\\Studium\\WorkspaceWAI\\WaiCams\\WebContent\\bilder\\"
+	
+		String imagePath = "C:\\Users\\Christopher\\Documents\\Studium\\WorkspaceWAI\\WaiCams\\WebContent\\bilder\\"
 							+ camId + "\\" 
 							+ camImage.getCaptureTime().getMonth() + "\\"
-							+ uuid + ".png");
-		camImage.setThumbPath("C:\\Users\\Christopher\\Documents\\Studium\\WorkspaceWAI\\WaiCams\\WebContent\\bilder\\Thumbs\\"
+							+ uuid + ".png";
+		String thumbPath = "C:\\Users\\Christopher\\Documents\\Studium\\WorkspaceWAI\\WaiCams\\WebContent\\bilder\\Thumbs\\"
 				+ camId + "\\" 
 				+ camImage.getCaptureTime().getMonth() + "\\"
-				+ uuid + ".png");
+				+ uuid + ".png";
+	
 		camImage.setUuid(uuid);
 		
 		save(camImage);
@@ -191,7 +193,7 @@ public class CamImageDaoImpl implements CamImageDao {
 		Connection con = null;
 		try {
 			con = jndi.getConnection(connectionString);
-			PreparedStatement pstmt = con.prepareStatement("select id, captureTime, name, camId from camImages where id = ? AND capturetime > ? AND CaptureTime < ?");
+			PreparedStatement pstmt = con.prepareStatement("select id, captureTime, uuid, camId from camImages where camid = ? AND capturetime > ? AND CaptureTime < ?");
 			pstmt.setLong(1, camId);
 			pstmt.setTimestamp(2, start);
 			pstmt.setTimestamp(3, end);

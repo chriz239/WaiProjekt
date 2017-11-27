@@ -39,9 +39,9 @@
 		
 			<tr>
 				<td>Cam wählen:
-				<select>
+				<select name="camId">
 					<c:forEach var="cam" items="${cams}" varStatus="i">
-						<option name="camid" value="${cam.id}">cam.name</option>
+						<option name="camId" value="${cam.id}">${cam.name}</option>
 					</c:forEach>
 				</select>
 				</td>
@@ -83,7 +83,7 @@
 					</td>					
 					<!-- <td><a href="getPicID=${pics[i.index].id}"><img src="getPicID=${pics[i.index].id}&thumb" style="width:100px;height:100px;"></a> -->
 					<td>
-						<a href="/bilder/${pic.uuid}.png"><img src="/bilder/Thumbs/${pic.uuid}.png" /></a>
+						<a href="${pic.imagePath}"><img src="${pic.thumbPath}" /></a>
 					</td>
 				</tr>
 			</c:forEach>	

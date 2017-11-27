@@ -3,6 +3,7 @@ package servlets;
 import java.io.IOException;
 import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -27,6 +28,9 @@ public class ImageFilter extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// hier seite normal anzeigen
 		
+		if (checkUserIsLoggedIn(request)) return;
+		
+		
 		setCams(request);
 		
 		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/image_filter.jsp");
@@ -39,6 +43,12 @@ public class ImageFilter extends HttpServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+
+	private boolean checkUserIsLoggedIn(HttpServletRequest request) {
+		HttpSession session = request.getSession(true);
+		User user = (User) session.getAttribute("user");
+		return (user == null);
 	}
 
 	private void setCams(HttpServletRequest request) {
@@ -57,10 +67,10 @@ public class ImageFilter extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// check params
-		if (request.getParameter("Date_from") == null 
-				|| request.getParameter("Date_till") == null
-				|| request.getParameter("camId") == null) {
+		if (checkUserIsLoggedIn(request)) return;
+		
+		// check params: only camId is realy needed
+		if (request.getParameter("camId") == null) {
 			// error
 			return;
 		}
@@ -71,9 +81,10 @@ public class ImageFilter extends HttpServlet {
 		String sDateTill = request.getParameter("Date_till");
 		
 		long camId = Long.parseLong(sCamId);
-		// TODO: convert date to sqlTimestamp
-		Timestamp dateFrom = null;
-		Timestamp dateTill = null;
+		
+		// set default values if date is not provided
+		Timestamp dateFrom = (sDateFrom.equals("")) ? Timestamp.valueOf("2011-10-02 18:48:05.123456") : Timestamp.valueOf(sDateFrom);
+		Timestamp dateTill = (sDateTill.equals("")) ? new Timestamp(Calendar.getInstance().getTime().getTime()) : Timestamp.valueOf(sDateTill);
 		
 		// get selected images from DB and display them
 		CamImageDao camImageDao = DaoFactory.getCamImageDao();

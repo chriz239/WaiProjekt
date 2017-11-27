@@ -8,20 +8,12 @@ public class CamImage {
 	private Timestamp captureTime;
 	private UUID uuid;
 	private Long CamId;
-	private String imagePath;
-	private String thumbPath;
 	
 	public String getThumbPath() {
-		return thumbPath;
-	}
-	public void setThumbPath(String thumbPath) {
-		this.thumbPath = thumbPath;
+		return "/WaiCams/bilder/Thumbs/" + CamId + "/" + captureTime.getMonth() + "/" + uuid.toString() + ".png";
 	}
 	public String getImagePath() {
-		return imagePath;
-	}
-	public void setImagePath(String path) {
-		this.imagePath = path;
+		return "/WaiCams/bilder/" + CamId + "/" + captureTime.getMonth() + "/" + uuid.toString() + ".png";
 	}
 	public Long getId() {
 		return id;
