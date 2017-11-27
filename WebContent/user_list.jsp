@@ -45,10 +45,12 @@
   	</table>
   	<br>
   	<p>
-  	<a href="webcam_list">assign Webcam to User</a>
+  	<a href="webcam_list.jsp">assign Webcam to User</a>
   	<br>
   	<a href="add_user.jsp">Add User</a>
-  	</p>
+  	<br>
+  	<p>
+  	<a href="navigation_menu.jsp">Navigation menu</a>
 </center>
 </body>
 </html>

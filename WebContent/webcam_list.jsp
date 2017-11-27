@@ -51,7 +51,9 @@
   	<a href="add_new_webcam">Add new Webcam</a>
   	<br>
   	<a href="add_user.jsp">Add User</a>
-  	</p>
+  	<br>
+  	<p>
+  	<a href="navigation_menu.jsp">Navigation menu</a>
 </center>
 </body>
 </html>

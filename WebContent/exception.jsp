@@ -11,6 +11,6 @@
 	<h1>Error!</h1>
 	Message: ${error.message}
 	<br>
-	<a href="main.jsp">Main menu</a>
+	<a href="Login.jsp">Main menu</a>
 </body>
 </html>

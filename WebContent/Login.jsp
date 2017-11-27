@@ -38,10 +38,5 @@
 		</table>
 		</center>
 	</form>
-	<br>
-	<center>
-		<p><a href="main.jsp">Main menu</a></p>
-	</center>
-
 </body>
 </html>

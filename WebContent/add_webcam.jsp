@@ -28,7 +28,7 @@
 		</table>
 	</form>
 	<br>
-	<p><a href="main.jsp">Main menu</a></p>
+	<p><a href="navigation_menu.jsp">Navigation menu</a></p>
 	</center>
 </body>
 </html>
