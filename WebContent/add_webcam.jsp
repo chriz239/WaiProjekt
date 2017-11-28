@@ -5,21 +5,21 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Edit WebCam</title>
+<title>Add WebCam</title>
 </head>
 <body>
 	<center>
 	<h1>Add WebCam</h1>
-	<form name="form_add_Webcam" action="cam_mod" method="post">		
+	<form name="form_add_Webcam" action="AddCam" method="post">		
 		<table border="0">
 			<tbody>
 				<tr>
 					<td>Name</td>
-					<td><input type="text" name="camUri" value="" style="width: 300px"></td>		
+					<td><input type="text" name="camName" value="" style="width: 300px"></td>		
 				</tr>
 				<tr>
 					<td>URL</td>
-					<td><input type="text" name="camName" value="" style="width: 300px"></td>		
+					<td><input type="text" name="camUri" value="" style="width: 300px"></td>		
 				</tr>
 				<tr>	
 					<td colspan="2"><center><input type="submit" name="btnAdd" value="Add"></center></td>

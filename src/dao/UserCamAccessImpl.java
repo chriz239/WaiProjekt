@@ -90,5 +90,33 @@ public class UserCamAccessImpl implements UserCamAccess {
 			}				
 		}
 	}
+
+	@Override
+	public void remove(long userid, long camid) {
+		Connection con = null;
+		try {
+			con = jndi.getConnection(connectionString);
+			
+			// check if entry exists
+			PreparedStatement pstmt = con.prepareStatement("select * from usercamaccess where userid = ? AND camid = ?");
+			pstmt.setLong(1, userid);
+			pstmt.setLong(2, camid);
+			ResultSet rs = pstmt.executeQuery();
+			if (!rs.next()) {
+				// entry does not exists so just return
+				return;
+			}
+			
+			// entry exists so remove it
+			pstmt = con.prepareStatement("delete from usercamaccess where userid = ? AND camid = ?");
+			pstmt.setLong(1, userid);
+			pstmt.setLong(2, camid);
+			pstmt.executeUpdate();
+		} catch (Exception ex) {
+			
+		} finally {
+			closeConnection(con);
+		}
+	}
 	
 }

@@ -6,4 +6,5 @@ public interface UserCamAccess {
 	public void add(long userid, long camid);
 	public boolean hasAccess(long userid, long camid);
 	public List<Long> getCamsOfUser(long userid);
+	public void remove(long userid, long camid);
 }

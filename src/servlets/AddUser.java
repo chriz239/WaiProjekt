@@ -17,29 +17,30 @@ import models.User;
 public class AddUser extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private final UserDao userDao = DaoFactory.getUserDao();
-    
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// Hier AddUser.jsp normal anzeigen
+		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/add_user.jsp");
+		dispatcher.forward(request, response);
 	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// check params
 		if (request.getParameter("name") == null || request.getParameter("password") == null) {
 			// error
 		}
-		
+
 		// extract params
 		String name = request.getParameter("name");
 		String password = request.getParameter("password");
-		
+
 		// create user in db
 		User user = new User(name, password);
 		userDao.save(user);
-		
-		// show found images
-		// TODO: schauen wie man parameter an jsp übergibt
-		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/jsp/add_user.jsp");
-		dispatcher.forward(request, response);
+
+		doGet(request, response);
 	}
 
 }

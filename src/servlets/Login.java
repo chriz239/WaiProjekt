@@ -65,15 +65,14 @@ public class Login extends HttpServlet {
 		// forward to next page depending on mode
 		if (selectedMode.equals("uMode")) {
 			// redirect user to webcam_search
-			RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/ImageFilter");
+			//RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/ImageFilter");
 			//dispatcher.forward(request, response);
 			response.sendRedirect("ImageFilter");
 		}
 		
 		if (selectedMode.equals("pMode")) {
-			//RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/UserList");
-			//dispatcher.forward(request, response);
-			response.sendRedirect("UserList");
+			RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/navigation_menu.jsp");
+			dispatcher.forward(request, response);
 		}
 	}
 }

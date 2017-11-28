@@ -1423,3 +1423,575 @@
 (2017-11-27 15:34:00)  INFO BackgroundWorker:35 - Get image from URL: https://www.mvv.de/webcam_maritim/MA-Wasserturm.jpg
 (2017-11-27 15:34:00)  INFO BackgroundWorker:43 - Save image to db
 (2017-11-27 15:34:00)  INFO LoggingJobHistoryPlugin:511 - Job GROUP-1.WAI-Job execution complete at  15:34:00 11/27/2017 and reports: null
+(2017-11-28 14:56:38)  INFO SystemStartup:34 - ContextInitialized
+(2017-11-28 14:56:38)  INFO QuartzInitializerServlet:50 - Quartz Initializer Servlet loaded, initializing Scheduler...
+(2017-11-28 14:56:38)  INFO SchedulerSignalerImpl:60 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+(2017-11-28 14:56:38)  INFO QuartzScheduler:222 - Quartz Scheduler v.1.8.5 created.
+(2017-11-28 14:56:38)  INFO XMLSchedulingDataProcessorPlugin:199 - Registering Quartz Job Initialization Plug-in.
+(2017-11-28 14:56:38)  INFO RAMJobStore:139 - RAMJobStore initialized.
+(2017-11-28 14:56:38)  INFO QuartzScheduler:244 - Scheduler meta-data: Quartz Scheduler (v1.8.5) 'CamUrlGrapperScheduler' with instanceId 'Chris-Surface1511877398562'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 2 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+(2017-11-28 14:56:38)  INFO StdSchedulerFactory:1280 - Quartz scheduler 'CamUrlGrapperScheduler' initialized from the specified file : 'C:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz.properties'
+(2017-11-28 14:56:38)  INFO StdSchedulerFactory:1284 - Quartz scheduler version: 1.8.5
+(2017-11-28 14:56:38)  INFO XMLSchedulingDataProcessor:496 - Parsing XML file: c:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz-jobs.xml with systemId: c:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz-jobs.xml
+(2017-11-28 14:56:38)  INFO XMLSchedulingDataProcessor:970 - Adding 1 jobs, 1 triggers.
+(2017-11-28 14:56:38)  INFO XMLSchedulingDataProcessor:995 - Adding job: GROUP-1.WAI-Job
+(2017-11-28 14:56:38)  INFO QuartzScheduler:500 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511877398562 started.
+(2017-11-28 14:56:38)  INFO QuartzInitializerServlet:73 - Scheduler has been started...
+(2017-11-28 14:56:38)  INFO QuartzInitializerServlet:87 - Group: GROUP-1 contains the following jobs
+(2017-11-28 14:56:38)  INFO QuartzInitializerServlet:91 - - WAI-Job
+(2017-11-28 14:56:38)  INFO QuartzInitializerServlet:95 - next Execution at: 28.11.2017 15:00:00
+(2017-11-28 15:00:00)  INFO LoggingJobHistoryPlugin:467 - Job GROUP-1.WAI-Job fired (by trigger MYTRIGGER_GROUP.WAITrigger) at:  15:00:00 11/28/2017
+(2017-11-28 15:00:00)  INFO BackgroundWorker:35 - Get image from URL: https://www.mvv.de/webcam_maritim/MA-Wasserturm.jpg
+(2017-11-28 15:00:01)  INFO BackgroundWorker:43 - Save image to db
+(2017-11-28 15:00:01)  INFO LoggingJobHistoryPlugin:511 - Job GROUP-1.WAI-Job execution complete at  15:00:01 11/28/2017 and reports: null
+(2017-11-28 15:02:50)  INFO QuartzScheduler:616 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511877398562 shutting down.
+(2017-11-28 15:02:50)  INFO QuartzScheduler:537 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511877398562 paused.
+(2017-11-28 15:02:50)  INFO QuartzScheduler:688 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511877398562 shutdown complete.
+(2017-11-28 15:02:50)  INFO QuartzInitializerServlet:128 - Quartz Scheduler successful shutdown.
+(2017-11-28 15:02:50)  INFO SystemStartup:42 - ContextDestroyed
+(2017-11-28 15:02:53)  INFO SystemStartup:34 - ContextInitialized
+(2017-11-28 15:02:53)  INFO QuartzInitializerServlet:50 - Quartz Initializer Servlet loaded, initializing Scheduler...
+(2017-11-28 15:02:53)  INFO SchedulerSignalerImpl:60 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+(2017-11-28 15:02:53)  INFO QuartzScheduler:222 - Quartz Scheduler v.1.8.5 created.
+(2017-11-28 15:02:53)  INFO XMLSchedulingDataProcessorPlugin:199 - Registering Quartz Job Initialization Plug-in.
+(2017-11-28 15:02:53)  INFO RAMJobStore:139 - RAMJobStore initialized.
+(2017-11-28 15:02:53)  INFO QuartzScheduler:244 - Scheduler meta-data: Quartz Scheduler (v1.8.5) 'CamUrlGrapperScheduler' with instanceId 'Chris-Surface1511877773526'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 2 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+(2017-11-28 15:02:53)  INFO StdSchedulerFactory:1280 - Quartz scheduler 'CamUrlGrapperScheduler' initialized from the specified file : 'C:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz.properties'
+(2017-11-28 15:02:53)  INFO StdSchedulerFactory:1284 - Quartz scheduler version: 1.8.5
+(2017-11-28 15:02:53)  INFO XMLSchedulingDataProcessor:496 - Parsing XML file: c:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz-jobs.xml with systemId: c:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz-jobs.xml
+(2017-11-28 15:02:53)  INFO XMLSchedulingDataProcessor:970 - Adding 1 jobs, 1 triggers.
+(2017-11-28 15:02:53)  INFO XMLSchedulingDataProcessor:995 - Adding job: GROUP-1.WAI-Job
+(2017-11-28 15:02:53)  INFO QuartzScheduler:500 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511877773526 started.
+(2017-11-28 15:02:53)  INFO QuartzInitializerServlet:73 - Scheduler has been started...
+(2017-11-28 15:02:53)  INFO QuartzInitializerServlet:87 - Group: GROUP-1 contains the following jobs
+(2017-11-28 15:02:53)  INFO QuartzInitializerServlet:91 - - WAI-Job
+(2017-11-28 15:02:53)  INFO QuartzInitializerServlet:95 - next Execution at: 28.11.2017 15:10:00
+(2017-11-28 15:03:25)  INFO SystemStartup:34 - ContextInitialized
+(2017-11-28 15:03:25)  INFO QuartzInitializerServlet:50 - Quartz Initializer Servlet loaded, initializing Scheduler...
+(2017-11-28 15:03:25)  INFO SchedulerSignalerImpl:60 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+(2017-11-28 15:03:25)  INFO QuartzScheduler:222 - Quartz Scheduler v.1.8.5 created.
+(2017-11-28 15:03:25)  INFO XMLSchedulingDataProcessorPlugin:199 - Registering Quartz Job Initialization Plug-in.
+(2017-11-28 15:03:25)  INFO RAMJobStore:139 - RAMJobStore initialized.
+(2017-11-28 15:03:25)  INFO QuartzScheduler:244 - Scheduler meta-data: Quartz Scheduler (v1.8.5) 'CamUrlGrapperScheduler' with instanceId 'Chris-Surface1511877805396'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 2 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+(2017-11-28 15:03:25)  INFO StdSchedulerFactory:1280 - Quartz scheduler 'CamUrlGrapperScheduler' initialized from the specified file : 'C:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz.properties'
+(2017-11-28 15:03:25)  INFO StdSchedulerFactory:1284 - Quartz scheduler version: 1.8.5
+(2017-11-28 15:03:25)  INFO XMLSchedulingDataProcessor:496 - Parsing XML file: c:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz-jobs.xml with systemId: c:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz-jobs.xml
+(2017-11-28 15:03:25)  INFO XMLSchedulingDataProcessor:970 - Adding 1 jobs, 1 triggers.
+(2017-11-28 15:03:25)  INFO XMLSchedulingDataProcessor:995 - Adding job: GROUP-1.WAI-Job
+(2017-11-28 15:03:25)  INFO QuartzScheduler:500 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511877805396 started.
+(2017-11-28 15:03:25)  INFO QuartzInitializerServlet:73 - Scheduler has been started...
+(2017-11-28 15:03:25)  INFO QuartzInitializerServlet:87 - Group: GROUP-1 contains the following jobs
+(2017-11-28 15:03:25)  INFO QuartzInitializerServlet:91 - - WAI-Job
+(2017-11-28 15:03:25)  INFO QuartzInitializerServlet:95 - next Execution at: 28.11.2017 15:10:00
+(2017-11-28 15:09:05)  INFO QuartzScheduler:616 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511877805396 shutting down.
+(2017-11-28 15:09:05)  INFO QuartzScheduler:537 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511877805396 paused.
+(2017-11-28 15:09:05)  INFO QuartzScheduler:688 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511877805396 shutdown complete.
+(2017-11-28 15:09:05)  INFO QuartzInitializerServlet:128 - Quartz Scheduler successful shutdown.
+(2017-11-28 15:09:05)  INFO SystemStartup:42 - ContextDestroyed
+(2017-11-28 15:09:09)  INFO SystemStartup:34 - ContextInitialized
+(2017-11-28 15:09:09)  INFO QuartzInitializerServlet:50 - Quartz Initializer Servlet loaded, initializing Scheduler...
+(2017-11-28 15:09:10)  INFO SchedulerSignalerImpl:60 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+(2017-11-28 15:09:10)  INFO QuartzScheduler:222 - Quartz Scheduler v.1.8.5 created.
+(2017-11-28 15:09:10)  INFO XMLSchedulingDataProcessorPlugin:199 - Registering Quartz Job Initialization Plug-in.
+(2017-11-28 15:09:10)  INFO RAMJobStore:139 - RAMJobStore initialized.
+(2017-11-28 15:09:10)  INFO QuartzScheduler:244 - Scheduler meta-data: Quartz Scheduler (v1.8.5) 'CamUrlGrapperScheduler' with instanceId 'Chris-Surface1511878150008'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 2 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+(2017-11-28 15:09:10)  INFO StdSchedulerFactory:1280 - Quartz scheduler 'CamUrlGrapperScheduler' initialized from the specified file : 'C:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz.properties'
+(2017-11-28 15:09:10)  INFO StdSchedulerFactory:1284 - Quartz scheduler version: 1.8.5
+(2017-11-28 15:09:10)  INFO XMLSchedulingDataProcessor:496 - Parsing XML file: c:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz-jobs.xml with systemId: c:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz-jobs.xml
+(2017-11-28 15:09:10)  INFO XMLSchedulingDataProcessor:970 - Adding 1 jobs, 1 triggers.
+(2017-11-28 15:09:10)  INFO XMLSchedulingDataProcessor:995 - Adding job: GROUP-1.WAI-Job
+(2017-11-28 15:09:10)  INFO QuartzScheduler:500 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511878150008 started.
+(2017-11-28 15:09:10)  INFO QuartzInitializerServlet:73 - Scheduler has been started...
+(2017-11-28 15:09:10)  INFO QuartzInitializerServlet:87 - Group: GROUP-1 contains the following jobs
+(2017-11-28 15:09:10)  INFO QuartzInitializerServlet:91 - - WAI-Job
+(2017-11-28 15:09:10)  INFO QuartzInitializerServlet:95 - next Execution at: 28.11.2017 15:10:00
+(2017-11-28 15:10:00)  INFO LoggingJobHistoryPlugin:467 - Job GROUP-1.WAI-Job fired (by trigger MYTRIGGER_GROUP.WAITrigger) at:  15:10:00 11/28/2017
+(2017-11-28 15:10:00)  INFO BackgroundWorker:35 - Get image from URL: https://www.mvv.de/webcam_maritim/MA-Wasserturm.jpg
+(2017-11-28 15:10:01)  INFO BackgroundWorker:43 - Save image to db
+(2017-11-28 15:10:01)  INFO LoggingJobHistoryPlugin:511 - Job GROUP-1.WAI-Job execution complete at  15:10:01 11/28/2017 and reports: null
+(2017-11-28 15:12:34)  INFO QuartzScheduler:616 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511878150008 shutting down.
+(2017-11-28 15:12:34)  INFO QuartzScheduler:537 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511878150008 paused.
+(2017-11-28 15:12:34)  INFO QuartzScheduler:688 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511878150008 shutdown complete.
+(2017-11-28 15:12:34)  INFO QuartzInitializerServlet:128 - Quartz Scheduler successful shutdown.
+(2017-11-28 15:12:34)  INFO SystemStartup:42 - ContextDestroyed
+(2017-11-28 15:12:50)  INFO SystemStartup:34 - ContextInitialized
+(2017-11-28 15:12:50)  INFO QuartzInitializerServlet:50 - Quartz Initializer Servlet loaded, initializing Scheduler...
+(2017-11-28 15:12:50)  INFO SchedulerSignalerImpl:60 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+(2017-11-28 15:12:50)  INFO QuartzScheduler:222 - Quartz Scheduler v.1.8.5 created.
+(2017-11-28 15:12:50)  INFO XMLSchedulingDataProcessorPlugin:199 - Registering Quartz Job Initialization Plug-in.
+(2017-11-28 15:12:50)  INFO RAMJobStore:139 - RAMJobStore initialized.
+(2017-11-28 15:12:50)  INFO QuartzScheduler:244 - Scheduler meta-data: Quartz Scheduler (v1.8.5) 'CamUrlGrapperScheduler' with instanceId 'Chris-Surface1511878370439'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 2 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+(2017-11-28 15:12:50)  INFO StdSchedulerFactory:1280 - Quartz scheduler 'CamUrlGrapperScheduler' initialized from the specified file : 'C:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz.properties'
+(2017-11-28 15:12:50)  INFO StdSchedulerFactory:1284 - Quartz scheduler version: 1.8.5
+(2017-11-28 15:12:50)  INFO XMLSchedulingDataProcessor:496 - Parsing XML file: c:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz-jobs.xml with systemId: c:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz-jobs.xml
+(2017-11-28 15:12:50)  INFO XMLSchedulingDataProcessor:970 - Adding 1 jobs, 1 triggers.
+(2017-11-28 15:12:50)  INFO XMLSchedulingDataProcessor:995 - Adding job: GROUP-1.WAI-Job
+(2017-11-28 15:12:50)  INFO QuartzScheduler:500 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511878370439 started.
+(2017-11-28 15:12:50)  INFO QuartzInitializerServlet:73 - Scheduler has been started...
+(2017-11-28 15:12:50)  INFO QuartzInitializerServlet:87 - Group: GROUP-1 contains the following jobs
+(2017-11-28 15:12:50)  INFO QuartzInitializerServlet:91 - - WAI-Job
+(2017-11-28 15:12:50)  INFO QuartzInitializerServlet:95 - next Execution at: 28.11.2017 15:20:00
+(2017-11-28 15:15:08)  INFO QuartzScheduler:616 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511878370439 shutting down.
+(2017-11-28 15:15:08)  INFO QuartzScheduler:537 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511878370439 paused.
+(2017-11-28 15:15:08)  INFO QuartzScheduler:688 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511878370439 shutdown complete.
+(2017-11-28 15:15:08)  INFO QuartzInitializerServlet:128 - Quartz Scheduler successful shutdown.
+(2017-11-28 15:15:10)  INFO SystemStartup:42 - ContextDestroyed
+(2017-11-28 15:15:13)  INFO SystemStartup:34 - ContextInitialized
+(2017-11-28 15:15:13)  INFO QuartzInitializerServlet:50 - Quartz Initializer Servlet loaded, initializing Scheduler...
+(2017-11-28 15:15:13)  INFO SchedulerSignalerImpl:60 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+(2017-11-28 15:15:13)  INFO QuartzScheduler:222 - Quartz Scheduler v.1.8.5 created.
+(2017-11-28 15:15:13)  INFO XMLSchedulingDataProcessorPlugin:199 - Registering Quartz Job Initialization Plug-in.
+(2017-11-28 15:15:13)  INFO RAMJobStore:139 - RAMJobStore initialized.
+(2017-11-28 15:15:13)  INFO QuartzScheduler:244 - Scheduler meta-data: Quartz Scheduler (v1.8.5) 'CamUrlGrapperScheduler' with instanceId 'Chris-Surface1511878513813'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 2 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+(2017-11-28 15:15:13)  INFO StdSchedulerFactory:1280 - Quartz scheduler 'CamUrlGrapperScheduler' initialized from the specified file : 'C:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz.properties'
+(2017-11-28 15:15:13)  INFO StdSchedulerFactory:1284 - Quartz scheduler version: 1.8.5
+(2017-11-28 15:15:13)  INFO XMLSchedulingDataProcessor:496 - Parsing XML file: c:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz-jobs.xml with systemId: c:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz-jobs.xml
+(2017-11-28 15:15:13)  INFO XMLSchedulingDataProcessor:970 - Adding 1 jobs, 1 triggers.
+(2017-11-28 15:15:13)  INFO XMLSchedulingDataProcessor:995 - Adding job: GROUP-1.WAI-Job
+(2017-11-28 15:15:13)  INFO QuartzScheduler:500 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511878513813 started.
+(2017-11-28 15:15:13)  INFO QuartzInitializerServlet:73 - Scheduler has been started...
+(2017-11-28 15:15:13)  INFO QuartzInitializerServlet:87 - Group: GROUP-1 contains the following jobs
+(2017-11-28 15:15:13)  INFO QuartzInitializerServlet:91 - - WAI-Job
+(2017-11-28 15:15:13)  INFO QuartzInitializerServlet:95 - next Execution at: 28.11.2017 15:20:00
+(2017-11-28 15:15:17)  INFO QuartzScheduler:616 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511878513813 shutting down.
+(2017-11-28 15:15:17)  INFO QuartzScheduler:537 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511878513813 paused.
+(2017-11-28 15:15:17)  INFO QuartzScheduler:688 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511878513813 shutdown complete.
+(2017-11-28 15:15:17)  INFO QuartzInitializerServlet:128 - Quartz Scheduler successful shutdown.
+(2017-11-28 15:15:17)  INFO SystemStartup:42 - ContextDestroyed
+(2017-11-28 15:15:37)  INFO SystemStartup:34 - ContextInitialized
+(2017-11-28 15:15:37)  INFO QuartzInitializerServlet:50 - Quartz Initializer Servlet loaded, initializing Scheduler...
+(2017-11-28 15:15:37)  INFO SchedulerSignalerImpl:60 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+(2017-11-28 15:15:37)  INFO QuartzScheduler:222 - Quartz Scheduler v.1.8.5 created.
+(2017-11-28 15:15:37)  INFO XMLSchedulingDataProcessorPlugin:199 - Registering Quartz Job Initialization Plug-in.
+(2017-11-28 15:15:37)  INFO RAMJobStore:139 - RAMJobStore initialized.
+(2017-11-28 15:15:37)  INFO QuartzScheduler:244 - Scheduler meta-data: Quartz Scheduler (v1.8.5) 'CamUrlGrapperScheduler' with instanceId 'Chris-Surface1511878537675'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 2 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+(2017-11-28 15:15:37)  INFO StdSchedulerFactory:1280 - Quartz scheduler 'CamUrlGrapperScheduler' initialized from the specified file : 'C:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz.properties'
+(2017-11-28 15:15:37)  INFO StdSchedulerFactory:1284 - Quartz scheduler version: 1.8.5
+(2017-11-28 15:15:37)  INFO XMLSchedulingDataProcessor:496 - Parsing XML file: c:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz-jobs.xml with systemId: c:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz-jobs.xml
+(2017-11-28 15:15:37)  INFO XMLSchedulingDataProcessor:970 - Adding 1 jobs, 1 triggers.
+(2017-11-28 15:15:37)  INFO XMLSchedulingDataProcessor:995 - Adding job: GROUP-1.WAI-Job
+(2017-11-28 15:15:37)  INFO QuartzScheduler:500 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511878537675 started.
+(2017-11-28 15:15:37)  INFO QuartzInitializerServlet:73 - Scheduler has been started...
+(2017-11-28 15:15:37)  INFO QuartzInitializerServlet:87 - Group: GROUP-1 contains the following jobs
+(2017-11-28 15:15:37)  INFO QuartzInitializerServlet:91 - - WAI-Job
+(2017-11-28 15:15:37)  INFO QuartzInitializerServlet:95 - next Execution at: 28.11.2017 15:20:00
+(2017-11-28 15:20:00)  INFO LoggingJobHistoryPlugin:467 - Job GROUP-1.WAI-Job fired (by trigger MYTRIGGER_GROUP.WAITrigger) at:  15:20:00 11/28/2017
+(2017-11-28 15:20:00)  INFO BackgroundWorker:35 - Get image from URL: https://www.mvv.de/webcam_maritim/MA-Wasserturm.jpg
+(2017-11-28 15:20:01)  INFO BackgroundWorker:43 - Save image to db
+(2017-11-28 15:20:01)  INFO BackgroundWorker:35 - Get image from URL: http://cam.mannheim-wetter.info/cam1/mannheim-himmel-0.jpg
+(2017-11-28 15:20:01)  INFO BackgroundWorker:43 - Save image to db
+(2017-11-28 15:20:01)  INFO LoggingJobHistoryPlugin:511 - Job GROUP-1.WAI-Job execution complete at  15:20:01 11/28/2017 and reports: null
+(2017-11-28 15:30:00)  INFO LoggingJobHistoryPlugin:467 - Job GROUP-1.WAI-Job fired (by trigger MYTRIGGER_GROUP.WAITrigger) at:  15:30:00 11/28/2017
+(2017-11-28 15:30:00)  INFO BackgroundWorker:35 - Get image from URL: https://www.mvv.de/webcam_maritim/MA-Wasserturm.jpg
+(2017-11-28 15:30:00)  INFO BackgroundWorker:43 - Save image to db
+(2017-11-28 15:30:00)  INFO BackgroundWorker:35 - Get image from URL: http://cam.mannheim-wetter.info/cam1/mannheim-himmel-0.jpg
+(2017-11-28 15:30:00)  INFO BackgroundWorker:43 - Save image to db
+(2017-11-28 15:30:00)  INFO LoggingJobHistoryPlugin:511 - Job GROUP-1.WAI-Job execution complete at  15:30:00 11/28/2017 and reports: null
+(2017-11-28 15:40:00)  INFO LoggingJobHistoryPlugin:467 - Job GROUP-1.WAI-Job fired (by trigger MYTRIGGER_GROUP.WAITrigger) at:  15:40:00 11/28/2017
+(2017-11-28 15:40:00)  INFO BackgroundWorker:35 - Get image from URL: https://www.mvv.de/webcam_maritim/MA-Wasserturm.jpg
+(2017-11-28 15:40:00)  INFO BackgroundWorker:43 - Save image to db
+(2017-11-28 15:40:00)  INFO BackgroundWorker:35 - Get image from URL: http://cam.mannheim-wetter.info/cam1/mannheim-himmel-0.jpg
+(2017-11-28 15:40:00)  INFO BackgroundWorker:43 - Save image to db
+(2017-11-28 15:40:00)  INFO LoggingJobHistoryPlugin:511 - Job GROUP-1.WAI-Job execution complete at  15:40:00 11/28/2017 and reports: null
+(2017-11-28 15:50:00)  INFO LoggingJobHistoryPlugin:467 - Job GROUP-1.WAI-Job fired (by trigger MYTRIGGER_GROUP.WAITrigger) at:  15:50:00 11/28/2017
+(2017-11-28 15:50:00)  INFO BackgroundWorker:35 - Get image from URL: https://www.mvv.de/webcam_maritim/MA-Wasserturm.jpg
+(2017-11-28 15:50:00)  INFO BackgroundWorker:43 - Save image to db
+(2017-11-28 15:50:00)  INFO BackgroundWorker:35 - Get image from URL: http://cam.mannheim-wetter.info/cam1/mannheim-himmel-0.jpg
+(2017-11-28 15:50:00)  INFO BackgroundWorker:43 - Save image to db
+(2017-11-28 15:50:00)  INFO LoggingJobHistoryPlugin:511 - Job GROUP-1.WAI-Job execution complete at  15:50:00 11/28/2017 and reports: null
+(2017-11-28 16:00:00)  INFO LoggingJobHistoryPlugin:467 - Job GROUP-1.WAI-Job fired (by trigger MYTRIGGER_GROUP.WAITrigger) at:  16:00:00 11/28/2017
+(2017-11-28 16:00:00)  INFO BackgroundWorker:35 - Get image from URL: https://www.mvv.de/webcam_maritim/MA-Wasserturm.jpg
+(2017-11-28 16:00:00)  INFO BackgroundWorker:43 - Save image to db
+(2017-11-28 16:00:00)  INFO BackgroundWorker:35 - Get image from URL: http://cam.mannheim-wetter.info/cam1/mannheim-himmel-0.jpg
+(2017-11-28 16:00:00)  INFO BackgroundWorker:43 - Save image to db
+(2017-11-28 16:00:00)  INFO LoggingJobHistoryPlugin:511 - Job GROUP-1.WAI-Job execution complete at  16:00:00 11/28/2017 and reports: null
+(2017-11-28 16:10:00)  INFO LoggingJobHistoryPlugin:467 - Job GROUP-1.WAI-Job fired (by trigger MYTRIGGER_GROUP.WAITrigger) at:  16:10:00 11/28/2017
+(2017-11-28 16:10:00)  INFO BackgroundWorker:35 - Get image from URL: https://www.mvv.de/webcam_maritim/MA-Wasserturm.jpg
+(2017-11-28 16:10:00)  INFO BackgroundWorker:43 - Save image to db
+(2017-11-28 16:10:00)  INFO BackgroundWorker:35 - Get image from URL: http://cam.mannheim-wetter.info/cam1/mannheim-himmel-0.jpg
+(2017-11-28 16:10:00)  INFO BackgroundWorker:43 - Save image to db
+(2017-11-28 16:10:00)  INFO LoggingJobHistoryPlugin:511 - Job GROUP-1.WAI-Job execution complete at  16:10:00 11/28/2017 and reports: null
+(2017-11-28 16:20:00)  INFO LoggingJobHistoryPlugin:467 - Job GROUP-1.WAI-Job fired (by trigger MYTRIGGER_GROUP.WAITrigger) at:  16:20:00 11/28/2017
+(2017-11-28 16:20:00)  INFO BackgroundWorker:35 - Get image from URL: https://www.mvv.de/webcam_maritim/MA-Wasserturm.jpg
+(2017-11-28 16:20:00)  INFO BackgroundWorker:43 - Save image to db
+(2017-11-28 16:20:00)  INFO BackgroundWorker:35 - Get image from URL: http://cam.mannheim-wetter.info/cam1/mannheim-himmel-0.jpg
+(2017-11-28 16:20:00)  INFO BackgroundWorker:43 - Save image to db
+(2017-11-28 16:20:00)  INFO LoggingJobHistoryPlugin:511 - Job GROUP-1.WAI-Job execution complete at  16:20:00 11/28/2017 and reports: null
+(2017-11-28 16:30:00)  INFO LoggingJobHistoryPlugin:467 - Job GROUP-1.WAI-Job fired (by trigger MYTRIGGER_GROUP.WAITrigger) at:  16:30:00 11/28/2017
+(2017-11-28 16:30:00)  INFO BackgroundWorker:35 - Get image from URL: https://www.mvv.de/webcam_maritim/MA-Wasserturm.jpg
+(2017-11-28 16:30:00)  INFO BackgroundWorker:43 - Save image to db
+(2017-11-28 16:30:00)  INFO BackgroundWorker:35 - Get image from URL: http://cam.mannheim-wetter.info/cam1/mannheim-himmel-0.jpg
+(2017-11-28 16:30:00)  INFO BackgroundWorker:43 - Save image to db
+(2017-11-28 16:30:00)  INFO LoggingJobHistoryPlugin:511 - Job GROUP-1.WAI-Job execution complete at  16:30:00 11/28/2017 and reports: null
+(2017-11-28 16:36:24)  INFO QuartzScheduler:616 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511878537675 shutting down.
+(2017-11-28 16:36:24)  INFO QuartzScheduler:537 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511878537675 paused.
+(2017-11-28 16:36:24)  INFO QuartzScheduler:688 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511878537675 shutdown complete.
+(2017-11-28 16:36:24)  INFO QuartzInitializerServlet:128 - Quartz Scheduler successful shutdown.
+(2017-11-28 16:36:24)  INFO SystemStartup:42 - ContextDestroyed
+(2017-11-28 16:36:28)  INFO SystemStartup:34 - ContextInitialized
+(2017-11-28 16:36:28)  INFO QuartzInitializerServlet:50 - Quartz Initializer Servlet loaded, initializing Scheduler...
+(2017-11-28 16:36:28)  INFO SchedulerSignalerImpl:60 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+(2017-11-28 16:36:28)  INFO QuartzScheduler:222 - Quartz Scheduler v.1.8.5 created.
+(2017-11-28 16:36:28)  INFO XMLSchedulingDataProcessorPlugin:199 - Registering Quartz Job Initialization Plug-in.
+(2017-11-28 16:36:28)  INFO RAMJobStore:139 - RAMJobStore initialized.
+(2017-11-28 16:36:28)  INFO QuartzScheduler:244 - Scheduler meta-data: Quartz Scheduler (v1.8.5) 'CamUrlGrapperScheduler' with instanceId 'Chris-Surface1511883388177'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 2 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+(2017-11-28 16:36:28)  INFO StdSchedulerFactory:1280 - Quartz scheduler 'CamUrlGrapperScheduler' initialized from the specified file : 'C:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz.properties'
+(2017-11-28 16:36:28)  INFO StdSchedulerFactory:1284 - Quartz scheduler version: 1.8.5
+(2017-11-28 16:36:28)  INFO XMLSchedulingDataProcessor:496 - Parsing XML file: c:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz-jobs.xml with systemId: c:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz-jobs.xml
+(2017-11-28 16:36:28)  INFO XMLSchedulingDataProcessor:970 - Adding 1 jobs, 1 triggers.
+(2017-11-28 16:36:28)  INFO XMLSchedulingDataProcessor:995 - Adding job: GROUP-1.WAI-Job
+(2017-11-28 16:36:28)  INFO QuartzScheduler:500 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511883388177 started.
+(2017-11-28 16:36:28)  INFO QuartzInitializerServlet:73 - Scheduler has been started...
+(2017-11-28 16:36:28)  INFO QuartzInitializerServlet:87 - Group: GROUP-1 contains the following jobs
+(2017-11-28 16:36:28)  INFO QuartzInitializerServlet:91 - - WAI-Job
+(2017-11-28 16:36:28)  INFO QuartzInitializerServlet:95 - next Execution at: 28.11.2017 16:40:00
+(2017-11-28 16:40:00)  INFO LoggingJobHistoryPlugin:467 - Job GROUP-1.WAI-Job fired (by trigger MYTRIGGER_GROUP.WAITrigger) at:  16:40:00 11/28/2017
+(2017-11-28 16:40:00)  INFO BackgroundWorker:35 - Get image from URL: https://www.mvv.de/webcam_maritim/MA-Wasserturm.jpg
+(2017-11-28 16:40:00)  INFO BackgroundWorker:43 - Save image to db
+(2017-11-28 16:40:00)  INFO BackgroundWorker:35 - Get image from URL: http://cam.mannheim-wetter.info/cam1/mannheim-himmel-0.jpg
+(2017-11-28 16:40:00)  INFO BackgroundWorker:43 - Save image to db
+(2017-11-28 16:40:00)  INFO LoggingJobHistoryPlugin:511 - Job GROUP-1.WAI-Job execution complete at  16:40:00 11/28/2017 and reports: null
+(2017-11-28 16:50:00)  INFO LoggingJobHistoryPlugin:467 - Job GROUP-1.WAI-Job fired (by trigger MYTRIGGER_GROUP.WAITrigger) at:  16:50:00 11/28/2017
+(2017-11-28 16:50:00)  INFO BackgroundWorker:35 - Get image from URL: https://www.mvv.de/webcam_maritim/MA-Wasserturm.jpg
+(2017-11-28 16:50:00)  INFO BackgroundWorker:43 - Save image to db
+(2017-11-28 16:50:00)  INFO BackgroundWorker:35 - Get image from URL: http://cam.mannheim-wetter.info/cam1/mannheim-himmel-0.jpg
+(2017-11-28 16:50:00)  INFO BackgroundWorker:43 - Save image to db
+(2017-11-28 16:50:00)  INFO LoggingJobHistoryPlugin:511 - Job GROUP-1.WAI-Job execution complete at  16:50:00 11/28/2017 and reports: null
+(2017-11-28 17:00:00)  INFO LoggingJobHistoryPlugin:467 - Job GROUP-1.WAI-Job fired (by trigger MYTRIGGER_GROUP.WAITrigger) at:  17:00:00 11/28/2017
+(2017-11-28 17:00:00)  INFO BackgroundWorker:35 - Get image from URL: https://www.mvv.de/webcam_maritim/MA-Wasserturm.jpg
+(2017-11-28 17:00:00)  INFO BackgroundWorker:43 - Save image to db
+(2017-11-28 17:00:00)  INFO BackgroundWorker:35 - Get image from URL: http://cam.mannheim-wetter.info/cam1/mannheim-himmel-0.jpg
+(2017-11-28 17:00:00)  INFO BackgroundWorker:43 - Save image to db
+(2017-11-28 17:00:00)  INFO LoggingJobHistoryPlugin:511 - Job GROUP-1.WAI-Job execution complete at  17:00:00 11/28/2017 and reports: null
+(2017-11-28 17:10:00)  INFO LoggingJobHistoryPlugin:467 - Job GROUP-1.WAI-Job fired (by trigger MYTRIGGER_GROUP.WAITrigger) at:  17:10:00 11/28/2017
+(2017-11-28 17:10:00)  INFO BackgroundWorker:35 - Get image from URL: https://www.mvv.de/webcam_maritim/MA-Wasserturm.jpg
+(2017-11-28 17:10:00)  INFO BackgroundWorker:43 - Save image to db
+(2017-11-28 17:10:00)  INFO BackgroundWorker:35 - Get image from URL: http://cam.mannheim-wetter.info/cam1/mannheim-himmel-0.jpg
+(2017-11-28 17:10:00)  INFO BackgroundWorker:43 - Save image to db
+(2017-11-28 17:10:00)  INFO LoggingJobHistoryPlugin:511 - Job GROUP-1.WAI-Job execution complete at  17:10:00 11/28/2017 and reports: null
+(2017-11-28 17:20:00)  INFO LoggingJobHistoryPlugin:467 - Job GROUP-1.WAI-Job fired (by trigger MYTRIGGER_GROUP.WAITrigger) at:  17:20:00 11/28/2017
+(2017-11-28 17:20:00)  INFO BackgroundWorker:35 - Get image from URL: https://www.mvv.de/webcam_maritim/MA-Wasserturm.jpg
+(2017-11-28 17:20:00)  INFO BackgroundWorker:43 - Save image to db
+(2017-11-28 17:20:00)  INFO BackgroundWorker:35 - Get image from URL: http://cam.mannheim-wetter.info/cam1/mannheim-himmel-0.jpg
+(2017-11-28 17:20:00)  INFO BackgroundWorker:43 - Save image to db
+(2017-11-28 17:20:00)  INFO LoggingJobHistoryPlugin:511 - Job GROUP-1.WAI-Job execution complete at  17:20:00 11/28/2017 and reports: null
+(2017-11-28 17:30:00)  INFO LoggingJobHistoryPlugin:467 - Job GROUP-1.WAI-Job fired (by trigger MYTRIGGER_GROUP.WAITrigger) at:  17:30:00 11/28/2017
+(2017-11-28 17:30:00)  INFO BackgroundWorker:35 - Get image from URL: https://www.mvv.de/webcam_maritim/MA-Wasserturm.jpg
+(2017-11-28 17:30:00)  INFO BackgroundWorker:43 - Save image to db
+(2017-11-28 17:30:00)  INFO BackgroundWorker:35 - Get image from URL: http://cam.mannheim-wetter.info/cam1/mannheim-himmel-0.jpg
+(2017-11-28 17:30:00)  INFO BackgroundWorker:43 - Save image to db
+(2017-11-28 17:30:00)  INFO LoggingJobHistoryPlugin:511 - Job GROUP-1.WAI-Job execution complete at  17:30:00 11/28/2017 and reports: null
+(2017-11-28 17:37:59)  INFO QuartzScheduler:616 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511883388177 shutting down.
+(2017-11-28 17:37:59)  INFO QuartzScheduler:537 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511883388177 paused.
+(2017-11-28 17:37:59)  INFO QuartzScheduler:688 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511883388177 shutdown complete.
+(2017-11-28 17:37:59)  INFO QuartzInitializerServlet:128 - Quartz Scheduler successful shutdown.
+(2017-11-28 17:37:59)  INFO SystemStartup:42 - ContextDestroyed
+(2017-11-28 17:38:03)  INFO SystemStartup:34 - ContextInitialized
+(2017-11-28 17:38:03)  INFO QuartzInitializerServlet:50 - Quartz Initializer Servlet loaded, initializing Scheduler...
+(2017-11-28 17:38:03)  INFO SchedulerSignalerImpl:60 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+(2017-11-28 17:38:03)  INFO QuartzScheduler:222 - Quartz Scheduler v.1.8.5 created.
+(2017-11-28 17:38:03)  INFO XMLSchedulingDataProcessorPlugin:199 - Registering Quartz Job Initialization Plug-in.
+(2017-11-28 17:38:03)  INFO RAMJobStore:139 - RAMJobStore initialized.
+(2017-11-28 17:38:03)  INFO QuartzScheduler:244 - Scheduler meta-data: Quartz Scheduler (v1.8.5) 'CamUrlGrapperScheduler' with instanceId 'Chris-Surface1511887083224'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 2 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+(2017-11-28 17:38:03)  INFO StdSchedulerFactory:1280 - Quartz scheduler 'CamUrlGrapperScheduler' initialized from the specified file : 'C:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz.properties'
+(2017-11-28 17:38:03)  INFO StdSchedulerFactory:1284 - Quartz scheduler version: 1.8.5
+(2017-11-28 17:38:03)  INFO XMLSchedulingDataProcessor:496 - Parsing XML file: c:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz-jobs.xml with systemId: c:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz-jobs.xml
+(2017-11-28 17:38:03)  INFO XMLSchedulingDataProcessor:970 - Adding 1 jobs, 1 triggers.
+(2017-11-28 17:38:03)  INFO XMLSchedulingDataProcessor:995 - Adding job: GROUP-1.WAI-Job
+(2017-11-28 17:38:03)  INFO QuartzScheduler:500 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511887083224 started.
+(2017-11-28 17:38:03)  INFO QuartzInitializerServlet:73 - Scheduler has been started...
+(2017-11-28 17:38:03)  INFO QuartzInitializerServlet:87 - Group: GROUP-1 contains the following jobs
+(2017-11-28 17:38:03)  INFO QuartzInitializerServlet:91 - - WAI-Job
+(2017-11-28 17:38:03)  INFO QuartzInitializerServlet:95 - next Execution at: 28.11.2017 17:40:00
+(2017-11-28 19:48:42)  INFO SystemStartup:34 - ContextInitialized
+(2017-11-28 19:48:42)  INFO QuartzInitializerServlet:50 - Quartz Initializer Servlet loaded, initializing Scheduler...
+(2017-11-28 19:48:42)  INFO SchedulerSignalerImpl:60 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+(2017-11-28 19:48:42)  INFO QuartzScheduler:222 - Quartz Scheduler v.1.8.5 created.
+(2017-11-28 19:48:42)  INFO XMLSchedulingDataProcessorPlugin:199 - Registering Quartz Job Initialization Plug-in.
+(2017-11-28 19:48:42)  INFO RAMJobStore:139 - RAMJobStore initialized.
+(2017-11-28 19:48:42)  INFO QuartzScheduler:244 - Scheduler meta-data: Quartz Scheduler (v1.8.5) 'CamUrlGrapperScheduler' with instanceId 'Chris-Surface1511894922830'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 2 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+(2017-11-28 19:48:42)  INFO StdSchedulerFactory:1280 - Quartz scheduler 'CamUrlGrapperScheduler' initialized from the specified file : 'C:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz.properties'
+(2017-11-28 19:48:42)  INFO StdSchedulerFactory:1284 - Quartz scheduler version: 1.8.5
+(2017-11-28 19:48:42)  INFO XMLSchedulingDataProcessor:496 - Parsing XML file: c:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz-jobs.xml with systemId: c:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz-jobs.xml
+(2017-11-28 19:48:42)  INFO XMLSchedulingDataProcessor:970 - Adding 1 jobs, 1 triggers.
+(2017-11-28 19:48:42)  INFO XMLSchedulingDataProcessor:995 - Adding job: GROUP-1.WAI-Job
+(2017-11-28 19:48:42)  INFO QuartzScheduler:500 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511894922830 started.
+(2017-11-28 19:48:42)  INFO QuartzInitializerServlet:73 - Scheduler has been started...
+(2017-11-28 19:48:42)  INFO QuartzInitializerServlet:87 - Group: GROUP-1 contains the following jobs
+(2017-11-28 19:48:42)  INFO QuartzInitializerServlet:91 - - WAI-Job
+(2017-11-28 19:48:42)  INFO QuartzInitializerServlet:95 - next Execution at: 28.11.2017 19:50:00
+(2017-11-28 19:50:00)  INFO LoggingJobHistoryPlugin:467 - Job GROUP-1.WAI-Job fired (by trigger MYTRIGGER_GROUP.WAITrigger) at:  19:50:00 11/28/2017
+(2017-11-28 19:50:00)  INFO BackgroundWorker:35 - Get image from URL: https://www.mvv.de/webcam_maritim/MA-Wasserturm.jpg
+(2017-11-28 19:50:00)  INFO BackgroundWorker:43 - Save image to db
+(2017-11-28 19:50:01)  INFO BackgroundWorker:35 - Get image from URL: http://cam.mannheim-wetter.info/cam1/mannheim-himmel-0.jpg
+(2017-11-28 19:50:01)  INFO BackgroundWorker:43 - Save image to db
+(2017-11-28 19:50:02)  INFO LoggingJobHistoryPlugin:511 - Job GROUP-1.WAI-Job execution complete at  19:50:02 11/28/2017 and reports: null
+(2017-11-28 19:53:24)  INFO QuartzScheduler:616 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511894922830 shutting down.
+(2017-11-28 19:53:24)  INFO QuartzScheduler:537 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511894922830 paused.
+(2017-11-28 19:53:24)  INFO QuartzScheduler:688 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511894922830 shutdown complete.
+(2017-11-28 19:53:24)  INFO QuartzInitializerServlet:128 - Quartz Scheduler successful shutdown.
+(2017-11-28 19:53:24)  INFO SystemStartup:42 - ContextDestroyed
+(2017-11-28 19:53:27)  INFO SystemStartup:34 - ContextInitialized
+(2017-11-28 19:53:27)  INFO QuartzInitializerServlet:50 - Quartz Initializer Servlet loaded, initializing Scheduler...
+(2017-11-28 19:53:27)  INFO SchedulerSignalerImpl:60 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+(2017-11-28 19:53:27)  INFO QuartzScheduler:222 - Quartz Scheduler v.1.8.5 created.
+(2017-11-28 19:53:27)  INFO XMLSchedulingDataProcessorPlugin:199 - Registering Quartz Job Initialization Plug-in.
+(2017-11-28 19:53:27)  INFO RAMJobStore:139 - RAMJobStore initialized.
+(2017-11-28 19:53:27)  INFO QuartzScheduler:244 - Scheduler meta-data: Quartz Scheduler (v1.8.5) 'CamUrlGrapperScheduler' with instanceId 'Chris-Surface1511895207371'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 2 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+(2017-11-28 19:53:27)  INFO StdSchedulerFactory:1280 - Quartz scheduler 'CamUrlGrapperScheduler' initialized from the specified file : 'C:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz.properties'
+(2017-11-28 19:53:27)  INFO StdSchedulerFactory:1284 - Quartz scheduler version: 1.8.5
+(2017-11-28 19:53:27)  INFO XMLSchedulingDataProcessor:496 - Parsing XML file: c:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz-jobs.xml with systemId: c:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz-jobs.xml
+(2017-11-28 19:53:27)  INFO XMLSchedulingDataProcessor:970 - Adding 1 jobs, 1 triggers.
+(2017-11-28 19:53:27)  INFO XMLSchedulingDataProcessor:995 - Adding job: GROUP-1.WAI-Job
+(2017-11-28 19:53:27)  INFO QuartzScheduler:500 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511895207371 started.
+(2017-11-28 19:53:27)  INFO QuartzInitializerServlet:73 - Scheduler has been started...
+(2017-11-28 19:53:27)  INFO QuartzInitializerServlet:87 - Group: GROUP-1 contains the following jobs
+(2017-11-28 19:53:27)  INFO QuartzInitializerServlet:91 - - WAI-Job
+(2017-11-28 19:53:27)  INFO QuartzInitializerServlet:95 - next Execution at: 28.11.2017 20:00:00
+(2017-11-28 19:57:46)  INFO SystemStartup:34 - ContextInitialized
+(2017-11-28 19:57:46)  INFO QuartzInitializerServlet:50 - Quartz Initializer Servlet loaded, initializing Scheduler...
+(2017-11-28 19:57:47)  INFO SchedulerSignalerImpl:60 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+(2017-11-28 19:57:47)  INFO QuartzScheduler:222 - Quartz Scheduler v.1.8.5 created.
+(2017-11-28 19:57:47)  INFO XMLSchedulingDataProcessorPlugin:199 - Registering Quartz Job Initialization Plug-in.
+(2017-11-28 19:57:47)  INFO RAMJobStore:139 - RAMJobStore initialized.
+(2017-11-28 19:57:47)  INFO QuartzScheduler:244 - Scheduler meta-data: Quartz Scheduler (v1.8.5) 'CamUrlGrapperScheduler' with instanceId 'Chris-Surface1511895467025'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 2 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+(2017-11-28 19:57:47)  INFO StdSchedulerFactory:1280 - Quartz scheduler 'CamUrlGrapperScheduler' initialized from the specified file : 'C:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz.properties'
+(2017-11-28 19:57:47)  INFO StdSchedulerFactory:1284 - Quartz scheduler version: 1.8.5
+(2017-11-28 19:57:47)  INFO XMLSchedulingDataProcessor:496 - Parsing XML file: c:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz-jobs.xml with systemId: c:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz-jobs.xml
+(2017-11-28 19:57:47)  INFO XMLSchedulingDataProcessor:970 - Adding 1 jobs, 1 triggers.
+(2017-11-28 19:57:47)  INFO XMLSchedulingDataProcessor:995 - Adding job: GROUP-1.WAI-Job
+(2017-11-28 19:57:47)  INFO QuartzScheduler:500 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511895467025 started.
+(2017-11-28 19:57:47)  INFO QuartzInitializerServlet:73 - Scheduler has been started...
+(2017-11-28 19:57:47)  INFO QuartzInitializerServlet:87 - Group: GROUP-1 contains the following jobs
+(2017-11-28 19:57:47)  INFO QuartzInitializerServlet:91 - - WAI-Job
+(2017-11-28 19:57:47)  INFO QuartzInitializerServlet:95 - next Execution at: 28.11.2017 20:00:00
+(2017-11-28 20:00:49)  INFO SystemStartup:34 - ContextInitialized
+(2017-11-28 20:00:49)  INFO QuartzInitializerServlet:50 - Quartz Initializer Servlet loaded, initializing Scheduler...
+(2017-11-28 20:00:50)  INFO SchedulerSignalerImpl:60 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+(2017-11-28 20:00:50)  INFO QuartzScheduler:222 - Quartz Scheduler v.1.8.5 created.
+(2017-11-28 20:00:50)  INFO XMLSchedulingDataProcessorPlugin:199 - Registering Quartz Job Initialization Plug-in.
+(2017-11-28 20:00:50)  INFO RAMJobStore:139 - RAMJobStore initialized.
+(2017-11-28 20:00:50)  INFO QuartzScheduler:244 - Scheduler meta-data: Quartz Scheduler (v1.8.5) 'CamUrlGrapperScheduler' with instanceId 'Chris-Surface1511895649977'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 2 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+(2017-11-28 20:00:50)  INFO StdSchedulerFactory:1280 - Quartz scheduler 'CamUrlGrapperScheduler' initialized from the specified file : 'C:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz.properties'
+(2017-11-28 20:00:50)  INFO StdSchedulerFactory:1284 - Quartz scheduler version: 1.8.5
+(2017-11-28 20:00:50)  INFO XMLSchedulingDataProcessor:496 - Parsing XML file: c:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz-jobs.xml with systemId: c:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz-jobs.xml
+(2017-11-28 20:00:50)  INFO XMLSchedulingDataProcessor:970 - Adding 1 jobs, 1 triggers.
+(2017-11-28 20:00:50)  INFO XMLSchedulingDataProcessor:995 - Adding job: GROUP-1.WAI-Job
+(2017-11-28 20:00:50)  INFO QuartzScheduler:500 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511895649977 started.
+(2017-11-28 20:00:50)  INFO QuartzInitializerServlet:73 - Scheduler has been started...
+(2017-11-28 20:00:50)  INFO QuartzInitializerServlet:87 - Group: GROUP-1 contains the following jobs
+(2017-11-28 20:00:50)  INFO QuartzInitializerServlet:91 - - WAI-Job
+(2017-11-28 20:00:50)  INFO QuartzInitializerServlet:95 - next Execution at: 28.11.2017 20:10:00
+(2017-11-28 20:08:34)  INFO QuartzScheduler:616 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511895649977 shutting down.
+(2017-11-28 20:08:34)  INFO QuartzScheduler:537 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511895649977 paused.
+(2017-11-28 20:08:34)  INFO QuartzScheduler:688 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511895649977 shutdown complete.
+(2017-11-28 20:08:34)  INFO QuartzInitializerServlet:128 - Quartz Scheduler successful shutdown.
+(2017-11-28 20:08:34)  INFO SystemStartup:42 - ContextDestroyed
+(2017-11-28 20:08:50)  INFO SystemStartup:34 - ContextInitialized
+(2017-11-28 20:08:50)  INFO QuartzInitializerServlet:50 - Quartz Initializer Servlet loaded, initializing Scheduler...
+(2017-11-28 20:08:50)  INFO SchedulerSignalerImpl:60 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+(2017-11-28 20:08:50)  INFO QuartzScheduler:222 - Quartz Scheduler v.1.8.5 created.
+(2017-11-28 20:08:50)  INFO XMLSchedulingDataProcessorPlugin:199 - Registering Quartz Job Initialization Plug-in.
+(2017-11-28 20:08:50)  INFO RAMJobStore:139 - RAMJobStore initialized.
+(2017-11-28 20:08:50)  INFO QuartzScheduler:244 - Scheduler meta-data: Quartz Scheduler (v1.8.5) 'CamUrlGrapperScheduler' with instanceId 'Chris-Surface1511896130637'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 2 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+(2017-11-28 20:08:50)  INFO StdSchedulerFactory:1280 - Quartz scheduler 'CamUrlGrapperScheduler' initialized from the specified file : 'C:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz.properties'
+(2017-11-28 20:08:50)  INFO StdSchedulerFactory:1284 - Quartz scheduler version: 1.8.5
+(2017-11-28 20:08:50)  INFO XMLSchedulingDataProcessor:496 - Parsing XML file: c:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz-jobs.xml with systemId: c:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz-jobs.xml
+(2017-11-28 20:08:50)  INFO XMLSchedulingDataProcessor:970 - Adding 1 jobs, 1 triggers.
+(2017-11-28 20:08:50)  INFO XMLSchedulingDataProcessor:995 - Adding job: GROUP-1.WAI-Job
+(2017-11-28 20:08:50)  INFO QuartzScheduler:500 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511896130637 started.
+(2017-11-28 20:08:50)  INFO QuartzInitializerServlet:73 - Scheduler has been started...
+(2017-11-28 20:08:50)  INFO QuartzInitializerServlet:87 - Group: GROUP-1 contains the following jobs
+(2017-11-28 20:08:50)  INFO QuartzInitializerServlet:91 - - WAI-Job
+(2017-11-28 20:08:50)  INFO QuartzInitializerServlet:95 - next Execution at: 28.11.2017 20:10:00
+(2017-11-28 20:10:00)  INFO LoggingJobHistoryPlugin:467 - Job GROUP-1.WAI-Job fired (by trigger MYTRIGGER_GROUP.WAITrigger) at:  20:10:00 11/28/2017
+(2017-11-28 20:10:00)  INFO BackgroundWorker:35 - Get image from URL: https://www.mvv.de/webcam_maritim/MA-Wasserturm.jpg
+(2017-11-28 20:10:00)  INFO BackgroundWorker:43 - Save image to db
+(2017-11-28 20:10:00)  INFO BackgroundWorker:35 - Get image from URL: http://cam.mannheim-wetter.info/cam1/mannheim-himmel-0.jpg
+(2017-11-28 20:10:01)  INFO BackgroundWorker:43 - Save image to db
+(2017-11-28 20:10:01)  INFO LoggingJobHistoryPlugin:511 - Job GROUP-1.WAI-Job execution complete at  20:10:01 11/28/2017 and reports: null
+(2017-11-28 20:10:48)  INFO QuartzScheduler:616 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511896130637 shutting down.
+(2017-11-28 20:10:48)  INFO QuartzScheduler:537 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511896130637 paused.
+(2017-11-28 20:10:48)  INFO QuartzScheduler:688 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511896130637 shutdown complete.
+(2017-11-28 20:10:48)  INFO QuartzInitializerServlet:128 - Quartz Scheduler successful shutdown.
+(2017-11-28 20:10:48)  INFO SystemStartup:42 - ContextDestroyed
+(2017-11-28 20:10:51)  INFO SystemStartup:34 - ContextInitialized
+(2017-11-28 20:10:51)  INFO QuartzInitializerServlet:50 - Quartz Initializer Servlet loaded, initializing Scheduler...
+(2017-11-28 20:10:51)  INFO SchedulerSignalerImpl:60 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+(2017-11-28 20:10:51)  INFO QuartzScheduler:222 - Quartz Scheduler v.1.8.5 created.
+(2017-11-28 20:10:51)  INFO XMLSchedulingDataProcessorPlugin:199 - Registering Quartz Job Initialization Plug-in.
+(2017-11-28 20:10:51)  INFO RAMJobStore:139 - RAMJobStore initialized.
+(2017-11-28 20:10:51)  INFO QuartzScheduler:244 - Scheduler meta-data: Quartz Scheduler (v1.8.5) 'CamUrlGrapperScheduler' with instanceId 'Chris-Surface1511896251760'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 2 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+(2017-11-28 20:10:51)  INFO StdSchedulerFactory:1280 - Quartz scheduler 'CamUrlGrapperScheduler' initialized from the specified file : 'C:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz.properties'
+(2017-11-28 20:10:51)  INFO StdSchedulerFactory:1284 - Quartz scheduler version: 1.8.5
+(2017-11-28 20:10:51)  INFO XMLSchedulingDataProcessor:496 - Parsing XML file: c:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz-jobs.xml with systemId: c:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz-jobs.xml
+(2017-11-28 20:10:51)  INFO XMLSchedulingDataProcessor:970 - Adding 1 jobs, 1 triggers.
+(2017-11-28 20:10:51)  INFO XMLSchedulingDataProcessor:995 - Adding job: GROUP-1.WAI-Job
+(2017-11-28 20:10:51)  INFO QuartzScheduler:500 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511896251760 started.
+(2017-11-28 20:10:51)  INFO QuartzInitializerServlet:73 - Scheduler has been started...
+(2017-11-28 20:10:51)  INFO QuartzInitializerServlet:87 - Group: GROUP-1 contains the following jobs
+(2017-11-28 20:10:51)  INFO QuartzInitializerServlet:91 - - WAI-Job
+(2017-11-28 20:10:51)  INFO QuartzInitializerServlet:95 - next Execution at: 28.11.2017 20:20:00
+(2017-11-28 20:11:53)  INFO QuartzScheduler:616 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511896251760 shutting down.
+(2017-11-28 20:11:53)  INFO QuartzScheduler:537 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511896251760 paused.
+(2017-11-28 20:11:53)  INFO QuartzScheduler:688 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511896251760 shutdown complete.
+(2017-11-28 20:11:53)  INFO QuartzInitializerServlet:128 - Quartz Scheduler successful shutdown.
+(2017-11-28 20:11:53)  INFO SystemStartup:42 - ContextDestroyed
+(2017-11-28 20:11:55)  INFO SystemStartup:34 - ContextInitialized
+(2017-11-28 20:11:55)  INFO QuartzInitializerServlet:50 - Quartz Initializer Servlet loaded, initializing Scheduler...
+(2017-11-28 20:11:55)  INFO SchedulerSignalerImpl:60 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+(2017-11-28 20:11:55)  INFO QuartzScheduler:222 - Quartz Scheduler v.1.8.5 created.
+(2017-11-28 20:11:55)  INFO XMLSchedulingDataProcessorPlugin:199 - Registering Quartz Job Initialization Plug-in.
+(2017-11-28 20:11:55)  INFO RAMJobStore:139 - RAMJobStore initialized.
+(2017-11-28 20:11:55)  INFO QuartzScheduler:244 - Scheduler meta-data: Quartz Scheduler (v1.8.5) 'CamUrlGrapperScheduler' with instanceId 'Chris-Surface1511896315814'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 2 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+(2017-11-28 20:11:55)  INFO StdSchedulerFactory:1280 - Quartz scheduler 'CamUrlGrapperScheduler' initialized from the specified file : 'C:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz.properties'
+(2017-11-28 20:11:55)  INFO StdSchedulerFactory:1284 - Quartz scheduler version: 1.8.5
+(2017-11-28 20:11:55)  INFO XMLSchedulingDataProcessor:496 - Parsing XML file: c:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz-jobs.xml with systemId: c:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz-jobs.xml
+(2017-11-28 20:11:55)  INFO XMLSchedulingDataProcessor:970 - Adding 1 jobs, 1 triggers.
+(2017-11-28 20:11:55)  INFO XMLSchedulingDataProcessor:995 - Adding job: GROUP-1.WAI-Job
+(2017-11-28 20:11:55)  INFO QuartzScheduler:500 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511896315814 started.
+(2017-11-28 20:11:55)  INFO QuartzInitializerServlet:73 - Scheduler has been started...
+(2017-11-28 20:11:55)  INFO QuartzInitializerServlet:87 - Group: GROUP-1 contains the following jobs
+(2017-11-28 20:11:55)  INFO QuartzInitializerServlet:91 - - WAI-Job
+(2017-11-28 20:11:55)  INFO QuartzInitializerServlet:95 - next Execution at: 28.11.2017 20:20:00
+(2017-11-28 20:12:26)  INFO QuartzScheduler:616 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511896315814 shutting down.
+(2017-11-28 20:12:26)  INFO QuartzScheduler:537 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511896315814 paused.
+(2017-11-28 20:12:26)  INFO QuartzScheduler:688 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511896315814 shutdown complete.
+(2017-11-28 20:12:26)  INFO QuartzInitializerServlet:128 - Quartz Scheduler successful shutdown.
+(2017-11-28 20:12:26)  INFO SystemStartup:42 - ContextDestroyed
+(2017-11-28 20:12:29)  INFO SystemStartup:34 - ContextInitialized
+(2017-11-28 20:12:29)  INFO QuartzInitializerServlet:50 - Quartz Initializer Servlet loaded, initializing Scheduler...
+(2017-11-28 20:12:29)  INFO SchedulerSignalerImpl:60 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+(2017-11-28 20:12:29)  INFO QuartzScheduler:222 - Quartz Scheduler v.1.8.5 created.
+(2017-11-28 20:12:29)  INFO XMLSchedulingDataProcessorPlugin:199 - Registering Quartz Job Initialization Plug-in.
+(2017-11-28 20:12:29)  INFO RAMJobStore:139 - RAMJobStore initialized.
+(2017-11-28 20:12:29)  INFO QuartzScheduler:244 - Scheduler meta-data: Quartz Scheduler (v1.8.5) 'CamUrlGrapperScheduler' with instanceId 'Chris-Surface1511896349477'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 2 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+(2017-11-28 20:12:29)  INFO StdSchedulerFactory:1280 - Quartz scheduler 'CamUrlGrapperScheduler' initialized from the specified file : 'C:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz.properties'
+(2017-11-28 20:12:29)  INFO StdSchedulerFactory:1284 - Quartz scheduler version: 1.8.5
+(2017-11-28 20:12:29)  INFO XMLSchedulingDataProcessor:496 - Parsing XML file: c:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz-jobs.xml with systemId: c:/Users/Christopher/Documents/Studium/WorkspaceWAI/WaiCams/WebContent/config/quartz-jobs.xml
+(2017-11-28 20:12:29)  INFO XMLSchedulingDataProcessor:970 - Adding 1 jobs, 1 triggers.
+(2017-11-28 20:12:29)  INFO XMLSchedulingDataProcessor:995 - Adding job: GROUP-1.WAI-Job
+(2017-11-28 20:12:29)  INFO QuartzScheduler:500 - Scheduler CamUrlGrapperScheduler_$_Chris-Surface1511896349477 started.
+(2017-11-28 20:12:29)  INFO QuartzInitializerServlet:73 - Scheduler has been started...
+(2017-11-28 20:12:29)  INFO QuartzInitializerServlet:87 - Group: GROUP-1 contains the following jobs
+(2017-11-28 20:12:29)  INFO QuartzInitializerServlet:91 - - WAI-Job
+(2017-11-28 20:12:29)  INFO QuartzInitializerServlet:95 - next Execution at: 28.11.2017 20:20:00

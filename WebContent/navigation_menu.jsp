@@ -57,22 +57,21 @@
 <body>
 <center>
 	<h1>Navigation Menu</h1>
-
+	<!-- 
  	<div class="dropdown">
-  	<button class="dropbtn"><h3>User</h3> Username: ${user.username} UserID: ${user.id}</button>
+  	<button class="dropbtn"><h3>User</h3> Username: </button>
   		<div class="dropdown-content">
     		<a href="image_filter.jsp">Search webcam</a>
   		</div>
 	</div>
-
+ -->
  	<div class="dropdown">
-  	<button class="dropbtn"><h3>Admin</h3> Username: ${user.username} UserID: ${user.id}</button>
+  	<button class="dropbtn"><h3>Admin</h3></button>
   		<div class="dropdown-content">
-    		<a href="add_user.jsp">Add user</a>
-    		<a href="add_webcam.jsp">Add webcam</a>
-    		<a href="user_list.jsp">User list</a>
-    		<a href="webcam_list.jsp">Webcam list</a>
-    		<a href="image_filter.jsp">Search webcam</a>
+    		<a href="AddUser">Add user</a>
+    		<a href="AddCam">Add webcam</a>
+    		<a href="UserList">User list</a>
+    		<!-- <a href="webcam_list.jsp">Webcam list</a> -->
  		 </div>
 	</div>
 	

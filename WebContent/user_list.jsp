@@ -16,38 +16,29 @@
 	<table border="1">
   		<tbody>
 	  		<tr>	  						
-				<td>Name:   	</td>
-				<td>Id:     	</td>	
-				<td>Webcam:		</td>	
+				<td>Name:</td>
+				<td>Löschen:</td>	
+				<td>Webcam Zuweisung:</td>	
 			</tr>
 			
-			<c:forEach items="${user}" var="User">
+			<c:forEach items="${users}" var="user">
 				<tr>
 					<td><c:out value="${user.name}"/></td>
-					<td><c:out value="${user.id}"/></td>
-					<td><c:out value="${user.cam}"/></td>
 					<td>
-					  <form action="user_edit" method="post">
-	    			    <button name="UserID" value="${user.id}">Edit</button>
-					  </form>
+						<a href="UserMod?action=delete&userId=${user.id}">Löschen</a>
 					</td>
 					<td>
-					  <form action="user_del" method="post">
-	    			    <button name="UserID" value="${user.id}">Delete</button>
-					  </form>
+						<a href="UserMod?action=cams&userId=${user.id}">Cams</a> 
 					  </td>
 					  </tr>
-			</c:forEach>	  	
-			<tr>
-				<td></td>
-			</tr>		
+			</c:forEach>
   		</tbody>
   	</table>
   	<br>
   	<p>
-  	<a href="webcam_list.jsp">assign Webcam to User</a>
+  	<!-- <a href="webcam_list.jsp">assign Webcam to User</a> -->
   	<br>
-  	<a href="add_user.jsp">Add User</a>
+  	<a href="AddUser">Add User</a>
   	<br>
   	<p>
   	<a href="navigation_menu.jsp">Navigation menu</a>
