@@ -33,10 +33,9 @@ public class BackgroundWorker implements Job {
 			// get Image from URL and save to DB
 			try {
 				jlog.info("Get image from URL: " + cam.getUrl().toString());
-				//BufferedImage bi = ImageIO.read(cam.getUrl());
-				// geht 100 MAl schneller als die Zeile darüber
 				Image img = (new ImageIcon(cam.getUrl())).getImage();
-				BufferedImage bi = new BufferedImage(img.getWidth(null), img.getHeight(null), BufferedImage.TYPE_INT_ARGB);
+				BufferedImage bi = new BufferedImage(img.getWidth(null), 
+						img.getHeight(null), BufferedImage.TYPE_INT_ARGB);
 			    Graphics2D bGr = bi.createGraphics();
 			    bGr.drawImage(img, 0, 0, null);
 			    bGr.dispose();

@@ -128,7 +128,7 @@ public class CamImageDaoImpl implements CamImageDao {
 			int w, h, maxSize = 150;
 			// find bigger one
 			if (img.getHeight() > img.getWidth()) {
-				factor = 1.0 * img.getHeight() / maxSize; //100px
+				factor = 1.0 * img.getHeight() / maxSize;
 				h = maxSize;
 				w = (int) Math.round(img.getWidth() / factor);
 			} else {

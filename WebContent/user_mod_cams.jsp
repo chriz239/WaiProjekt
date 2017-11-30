@@ -12,7 +12,7 @@
 
 <body>
 	<center>
-		<h1>User List</h1>
+		<h1>Webcam Access</h1>
 		<table border="1">
 			<tbody>
 				<tr>

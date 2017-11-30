@@ -32,7 +32,7 @@
 <body onload="getDate()">
 <center>
 
-	<h1>Search Webcam</h1>
+	<h1>Image Filter</h1>
 	<form name="form_webcam_search" action="ImageFilter" method="post">
 		<table border = "1">
 		<tbody>
